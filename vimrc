@@ -1,6 +1,9 @@
 " Folding cheet sheet
 " zR    open all folds
 " zM    close all folds
+" za    toggle fold at cursor position
+" zj    move down to start of next fold
+" zk    move up to end of previous fold
 " An example for a vimrc file. {{{1
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -157,6 +160,7 @@ function! <SID>SynStack()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 " Set tabstop, softtabstop and shiftwidth to the same value {{{2
+" From http://vimcasts.org/episodes/tabs-and-spaces/
 command! -nargs=* Stab call Stab()
 function! Stab()
   let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
@@ -184,12 +188,68 @@ function! SummarizeTabs()
   endtry
 endfunction
 
+" Strip trailing whitespaces  {{{2
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+" Search for current visual selection with */# {{{2
+" Tip tip from: http://amix.dk/blog/viewEntry/19334
+function! CmdLine(str)
+    exe "menu Foo.Bar :" . a:str
+    emenu Foo.Bar
+    unmenu Foo
+endfunction 
+
+function! VisualSearch(direction) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
+
+"Basically you press * or # to search for the current selection
+"then 'n' should search forward, 'N' should search backwards.
+vnoremap <silent> * :call VisualSearch('f')<CR>
+vnoremap <silent> # :call VisualSearch('b')<CR>
+vnoremap <silent> gv :call VisualSearch('gv')<CR>
+
+" Status line {{{1
+" Good article on setting a statusline:
+"   http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
+
 " Mappings for a recovering TextMate user {{{1
 " Indentation {{{2
 nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
+
+" Commenting {{{2
+" requires NERDCommenter plugin
+vmap <D-/> ,c<space>gv
+map <D-/> ,c<space>
+
 " Move selection {{{2
 " Move current line down/up
 map <C-Down> ddp
