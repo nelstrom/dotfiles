@@ -138,6 +138,7 @@ map <D-0> :tablast<CR>
 
 " Manage plugins. {{{1
 runtime macros/matchit.vim
+call pathogen#runtime_append_all_bundles()
 
 " Easily modify vimrc {{{1
 nmap <leader>v :e $MYVIMRC<CR>
