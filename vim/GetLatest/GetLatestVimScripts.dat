@@ -1,4 +1,5 @@
 ScriptID SourceID Filename
 --------------------------
-294  1 Align.vim
-642  9 GetLatestVimScripts.vim
+294 10110 :AutoInstall: Align.vim
+642 8136 GetLatestVimScripts.vim
+642 8136 :AutoInstall: getscript.vim
