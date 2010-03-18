@@ -34,3 +34,6 @@
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
 	url = git://github.com/tpope/vim-markdown.git
+[submodule "vim/bundle/vim-space"]
+	path = vim/bundle/vim-space
+	url = git://github.com/tpope/vim-space.git
