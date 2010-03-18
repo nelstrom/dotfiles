@@ -1,3 +1,6 @@
 [submodule "vim/bundle/vim-rails"]
 	path = vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/vim-blackboard"]
+	path = vim/bundle/vim-blackboard
+	url = git://github.com/nelstrom/vim-blackboard.git
