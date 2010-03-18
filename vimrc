@@ -101,6 +101,9 @@ nmap <leader>l :set list!<CR>
 nmap <leader>w :set wrap!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 
+" Manage plugins. {{{1
+runtime macros/matchit.vim
+
 " Easily modify vimrc {{{1
 nmap <leader>v :e $MYVIMRC<CR>
 " http://stackoverflow.com/questions/2400264/is-it-possible-to-apply-vim-configurations-without-restarting/2400289#2400289
