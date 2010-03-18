@@ -95,6 +95,23 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+" Toggles & Switches (Leader commands) {{{1
+let mapleader = ","
+nmap <leader>l :set list!<CR>
+nmap <leader>w :set wrap!<CR>
+nmap <silent> <leader>n :silent :nohlsearch<CR>
+
+" Easily modify vimrc {{{1
+nmap <leader>v :e $MYVIMRC<CR>
+" http://stackoverflow.com/questions/2400264/is-it-possible-to-apply-vim-configurations-without-restarting/2400289#2400289
+if has("autocmd")
+  augroup myvimrchooks
+    au!
+    autocmd bufwritepost .vimrc source ~/.vimrc
+  augroup END
+endif
+
+
 " ==============================================================================
 "  Modelines: {{{1
-" vim: ts=4 nowrap fdm=marker
+" vim: nowrap fdm=marker
