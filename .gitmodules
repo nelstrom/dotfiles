@@ -4,3 +4,9 @@
 [submodule "vim/bundle/vim-blackboard"]
 	path = vim/bundle/vim-blackboard
 	url = git://github.com/nelstrom/vim-blackboard.git
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/vim-repeat"]
+	path = vim/bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
