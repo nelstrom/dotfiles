@@ -13,3 +13,6 @@
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/vim-vividchalk"]
+	path = vim/bundle/vim-vividchalk
+	url = git://github.com/tpope/vim-vividchalk.git
