@@ -4,6 +4,11 @@
 " za    toggle fold at cursor position
 " zj    move down to start of next fold
 " zk    move up to end of previous fold
+" Manage plugins. {{{1
+runtime macros/matchit.vim
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+let g:GetLatestVimScripts_allowautoinstall=1
 " An example for a vimrc file. {{{1
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -136,11 +141,6 @@ map <D-8> 8gt
 map <D-9> 9gt
 map <D-0> :tablast<CR>
 
-" Manage plugins. {{{1
-runtime macros/matchit.vim
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-let g:GetLatestVimScripts_allowautoinstall=1
 
 " Easily modify vimrc {{{1
 nmap <leader>v :e $MYVIMRC<CR>
