@@ -1,4 +1,4 @@
-" An example for a vimrc file.
+" An example for a vimrc file. {{{1
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
 " Last change:	2008 Jul 02
@@ -94,3 +94,7 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+" ==============================================================================
+"  Modelines: {{{1
+" vim: ts=4 nowrap fdm=marker
