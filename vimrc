@@ -95,12 +95,29 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+" Preferences {{{1
+set number
+set cursorline
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set listchars=tab:▸\ ,eol:¬
 " Toggles & Switches (Leader commands) {{{1
 let mapleader = ","
 nmap <leader>l :set list!<CR>
 nmap <leader>w :set wrap!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 
+" Mappings {{{1
+"Speed up buffer switching
+map <C-k> <C-W>k
+map <C-j> <C-W>j
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+" Bubble selection
+map <C-Down> ddp
+map <C-Up> dd<Up>P 
 " Manage plugins. {{{1
 runtime macros/matchit.vim
 
