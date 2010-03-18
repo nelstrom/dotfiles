@@ -102,6 +102,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set hidden
 set listchars=tab:▸\ ,eol:¬
 " Toggles & Switches (Leader commands) {{{1
 let mapleader = ","
@@ -110,14 +111,25 @@ nmap <leader>w :set wrap!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 
 " Mappings {{{1
-"Speed up buffer switching
+"Speed up buffer switching {{{2
 map <C-k> <C-W>k
 map <C-j> <C-W>j
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-" Bubble selection
-map <C-Down> ddp
-map <C-Up> dd<Up>P 
+" Speed up tab switching {{{2
+map <D-S-]> gt
+map <D-S-[> gT
+map <D-1> 1gt
+map <D-2> 2gt
+map <D-3> 3gt
+map <D-4> 4gt
+map <D-5> 5gt
+map <D-6> 6gt
+map <D-7> 7gt
+map <D-8> 8gt
+map <D-9> 9gt
+map <D-0> :tablast<CR>
+
 " Manage plugins. {{{1
 runtime macros/matchit.vim
 
@@ -131,7 +143,59 @@ if has("autocmd")
   augroup END
 endif
 
+" Custom commands and functions {{{1
+" Show syntax highlighting groups for word under cursor {{{2
+" Tip: http://stackoverflow.com/questions/1467438/find-out-to-which-highlight-group-a-particular-keyword-symbol-belongs-in-vim
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+" Set tabstop, softtabstop and shiftwidth to the same value {{{2
+command! -nargs=* Stab call Stab()
+function! Stab()
+  let l:tabstop = 1 * input('set tabstop = softtabstop = shiftwidth = ')
+  if l:tabstop > 0
+    let &l:sts = l:tabstop
+    let &l:ts = l:tabstop
+    let &l:sw = l:tabstop
+  endif
+  call SummarizeTabs()
+endfunction
+ 
+function! SummarizeTabs()
+  try
+    echohl ModeMsg
+    echon 'tabstop='.&l:ts
+    echon ' shiftwidth='.&l:sw
+    echon ' softtabstop='.&l:sts
+    if &l:et
+      echon ' expandtab'
+    else
+      echon ' noexpandtab'
+    end
+  finally
+    echohl None
+  endtry
+endfunction
 
-" ==============================================================================
+" Mappings for a recovering TextMate user {{{1
+" Indentation {{{2
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
+" Move selection {{{2
+" Bubble current line down/up
+map <C-Down> ddp
+map <C-Up> dd<Up>P
+" Bubble visually selected lines down/up
+vmap <C-Down> xp`[V`]
+vmap <C-Up> x<Up>P`[V`]
+" Bubble visual selection back/forwards
+vmap <C-Left> x<BS>P`[v`]
+vmap <C-Right> x<Space>P`[v`]
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
