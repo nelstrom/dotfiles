@@ -43,3 +43,6 @@
 [submodule "vim/bundle/vim-speeddating"]
 	path = vim/bundle/vim-speeddating
 	url = git://github.com/tpope/vim-speeddating.git
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
