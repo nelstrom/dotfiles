@@ -1,3 +1,6 @@
+" Folding cheet sheet
+" zR    open all folds
+" zM    close all folds
 " An example for a vimrc file. {{{1
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -188,14 +191,15 @@ nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
 " Move selection {{{2
-" Bubble current line down/up
+" Move current line down/up
 map <C-Down> ddp
 map <C-Up> dd<Up>P
-" Bubble visually selected lines down/up
+" Move visually selected lines down/up
 vmap <C-Down> xp`[V`]
 vmap <C-Up> x<Up>P`[V`]
-" Bubble visual selection back/forwards
+" Move visual selection back/forwards
 vmap <C-Left> x<BS>P`[v`]
 vmap <C-Right> x<Space>P`[v`]
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
+" }}}
