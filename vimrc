@@ -140,6 +140,7 @@ map <D-0> :tablast<CR>
 runtime macros/matchit.vim
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+let g:GetLatestVimScripts_allowautoinstall=1
 
 " Easily modify vimrc {{{1
 nmap <leader>v :e $MYVIMRC<CR>
