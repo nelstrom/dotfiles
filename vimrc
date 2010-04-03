@@ -203,18 +203,20 @@ function! SummarizeTabs()
 endfunction
 
 " Strip trailing whitespaces  {{{2
-function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
+function! Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
 endfunction
-nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+nmap _= :call Preserve("normal gg=G")<CR>
+
 " Search for current visual selection with */# {{{2
 " Tip tip from: http://amix.dk/blog/viewEntry/19334
 function! CmdLine(str)
