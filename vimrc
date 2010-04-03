@@ -115,6 +115,13 @@ set shiftwidth=4
 set expandtab
 set hidden
 set listchars=tab:▸\ ,eol:¬
+" Put swap files in /tmp file
+set backupdir=~/tmp
+set directory=~/tmp
+if has("autocmd")
+  autocmd FileType html,css setlocal ts=2 sts=2 sw=2 expandtab
+endif
+
 " Toggles & Switches (Leader commands) {{{1
 let mapleader = ","
 nmap <leader>l :set list!<CR>
@@ -122,7 +129,7 @@ nmap <leader>w :set wrap!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 
 " Mappings {{{1
-"Speed up buffer switching {{{2
+" Speed up buffer switching {{{2
 map <C-k> <C-W>k
 map <C-j> <C-W>j
 map <C-h> <C-W>h
