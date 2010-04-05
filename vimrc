@@ -120,6 +120,7 @@ set backupdir=~/tmp
 set directory=~/tmp
 if has("autocmd")
   autocmd FileType html,css setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd BufNewFile,BufRead *.rss setfiletype xml
 endif
 
 " Toggles & Switches (Leader commands) {{{1
