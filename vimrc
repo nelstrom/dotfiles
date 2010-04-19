@@ -128,6 +128,7 @@ let mapleader = ","
 nmap <leader>l :set list!<CR>
 nmap <leader>w :set wrap!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
+command! -nargs=* Wrap set wrap linebreak nolist
 
 " Mappings {{{1
 " Speed up buffer switching {{{2
