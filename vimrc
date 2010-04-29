@@ -125,8 +125,9 @@ endif
 
 " Toggles & Switches (Leader commands) {{{1
 let mapleader = ","
-nmap <leader>l :set list!<CR>
-nmap <leader>w :set wrap!<CR>
+nmap <silent> <leader>l :set list!<CR>
+nmap <silent> <leader>w :set wrap!<CR>
+nmap <silent> <leader>s :set spell! spl=en_gb<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 command! -nargs=* Wrap set wrap linebreak nolist
 
