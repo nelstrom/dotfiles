@@ -107,6 +107,7 @@ if !exists(":DiffOrig")
 endif
 
 " Preferences {{{1
+set visualbell t_vb=
 set number
 set cursorline
 set tabstop=4
