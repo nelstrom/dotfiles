@@ -116,6 +116,7 @@ set shiftwidth=4
 set expandtab
 set hidden
 set listchars=tab:▸\ ,eol:¬
+"set spelllang=en_gb
 " Put swap files in /tmp file
 set backupdir=~/tmp
 set directory=~/tmp
@@ -128,7 +129,7 @@ endif
 let mapleader = ","
 nmap <silent> <leader>l :set list!<CR>
 nmap <silent> <leader>w :set wrap!<CR>
-nmap <silent> <leader>s :set spell! spl=en_gb<CR>
+nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 command! -nargs=* Wrap set wrap linebreak nolist
 
