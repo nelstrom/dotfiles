@@ -1,18 +1,32 @@
+# .irbrc
+# vim: set syntax=ruby :
 require 'irb/completion'
 require 'irb/ext/save-history'
 require 'fileutils'
 require 'pp'
-require 'ap'
+require 'rubygems'
 
 ARGV.concat [ "--readline",
   "--prompt-mode",
   "simple" ]
+
+#begin
+#  # load wirble
+#  require 'wirble'
+#
+#  # start wirble (with color)
+#  Wirble.init
+#  Wirble.colorize
+#rescue LoadError => err
+#  warn "Couldn't load Wirble: #{err}"
+#end
 
 # 25 entries in the list
 IRB.conf[:SAVE_HISTORY] = 25
 
 # Store results in home directory with specified file name
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
+IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 # Giles Bowkett, Greg Brown, and several audience members from Giles' Ruby East presentation.
 # http://gilesbowkett.blogspot.com/2007/10/use-vi-or-any-text-editor-from-within.html
@@ -60,7 +74,7 @@ class InteractiveEditor
        FileUtils.touch(file) unless File.exist?(file)
        File.new(file)
       else
-       (@file && File.exist?(@file.path)) ? @file : Tempfile.new("irb_tempfile")
+       (@file && File.exist?(@file.path)) ? @file : Tempfile.new(["irb_tempfile", ".rb"])
     end
     mtime = File.stat(@file.path).mtime 
     Exec.system(@editor, @file.path)
@@ -131,4 +145,6 @@ class String
     end
   end
 end
+
+
 
