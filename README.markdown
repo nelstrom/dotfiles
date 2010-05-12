@@ -7,6 +7,7 @@ Create symlinks:
     ln -s ~/dotfiles/bashrc ~/.bashrc
     ln -s ~/dotfiles/vimrc ~/.vimrc
     ln -s ~/dotfiles/gvimrc ~/.gvimrc
+    ln -s ~/dotfiles/irbrc ~/.irbrc
     ln -s ~/dotfiles/vim ~/.vim
 
 Adding Plugin Bundles
