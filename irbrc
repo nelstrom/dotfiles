@@ -7,7 +7,8 @@ require 'pp'
 require 'rubygems'
 require 'ruby/copypaste'
 require 'ruby/interactive_editor'
-require 'ruby/string_extensions'
+require 'ruby/object_extensions'
+require 'ruby/pipe'
 
 ARGV.concat [ "--readline",
   "--prompt-mode",
