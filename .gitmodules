@@ -52,3 +52,6 @@
 [submodule "vim/bundle/vim-javascript"]
 	path = vim/bundle/vim-javascript
 	url = http://github.com/pangloss/vim-javascript.git
+[submodule "vim/bundle/gist"]
+	path = vim/bundle/gist
+	url = http://github.com/mattn/gist-vim.git
