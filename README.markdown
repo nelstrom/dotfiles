@@ -10,6 +10,13 @@ Create symlinks:
     ln -s ~/dotfiles/irbrc ~/.irbrc
     ln -s ~/dotfiles/vim ~/.vim
 
+VIM
+===
+
+My preferences for Vim are stored in `dotfiles/vimrc` and `dotfiles/gvimrc`
+respectively. All plugins and scripts are stored in the `dotfiles/vim`
+directory.
+
 Adding Plugin Bundles
 ---------------------
 
@@ -32,5 +39,19 @@ as follows:
     git add .
     git ci -m "Added the javascript bundle"
 
+RUBY
+====
+
+My preferences for IRB customisations are stored in `dotfiles/irbrc`. To get
+the most from these, you should install the
+[interactive_editor][i_editor] and [awesome_print][ap] gems, by
+running:
+
+    gem install interactive_editor awesome_print
+
+
+
 
 [jsbun]: http://github.com/pangloss/vim-javascript.git
+[ap]: http://github.com/michaeldv/awesome_print
+[i_editor]: http://github.com/jberkel/interactive_editor
