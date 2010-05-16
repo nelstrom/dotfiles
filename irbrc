@@ -9,7 +9,7 @@ require 'pp'
   rubygems
   ap
   ruby/copypaste
-  ruby/interactive_editor
+  interactive_editor
   ruby/object_extensions
   ruby/pipe
 ].each do |gem|
