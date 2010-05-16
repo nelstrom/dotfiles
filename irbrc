@@ -8,7 +8,6 @@ require 'pp'
 %w[
   rubygems
   ap
-  ruby/copypaste
   interactive_editor
   ruby/object_extensions
   ruby/pipe
@@ -30,3 +29,21 @@ IRB.conf[:SAVE_HISTORY] = 1000
 # Store results in home directory with specified file name
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
 IRB.conf[:PROMPT_MODE] = :SIMPLE
+
+# Copy/Paste stuff for OS X
+def copy(str)
+  IO.popen('pbcopy', 'w') { |f| f << str.to_s }
+end
+
+def copy_history
+  history = Readline::HISTORY.entries
+  index = history.rindex("exit") || -1
+  content = history[(index+1)..-2].join("\n")
+  puts content
+  copy content
+end
+
+def paste
+  `pbpaste`
+end
+
