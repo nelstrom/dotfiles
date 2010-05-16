@@ -1,5 +1,5 @@
 # .irbrc
-# vim: set syntax=ruby :
+# vim: set syntax=ruby foldmethod=marker :
 require 'irb/completion'
 require 'irb/ext/save-history'
 require 'fileutils'
@@ -9,8 +9,6 @@ require 'pp'
   rubygems
   ap
   interactive_editor
-  ruby/object_extensions
-  ruby/pipe
 ].each do |gem|
   begin
     require gem
@@ -23,14 +21,14 @@ ARGV.concat [ "--readline",
   "--prompt-mode",
   "simple" ]
 
-# 25 entries in the list
+# 1000 entries in the list
 IRB.conf[:SAVE_HISTORY] = 1000
 
 # Store results in home directory with specified file name
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-# Copy/Paste stuff for OS X
+# Copy/Paste stuff for OS X {{{1
 def copy(str)
   IO.popen('pbcopy', 'w') { |f| f << str.to_s }
 end
@@ -47,3 +45,26 @@ def paste
   `pbpaste`
 end
 
+# This extension adds a UNIX-style pipe to strings {{{1
+#
+# Synopsis:
+#
+# >> puts "UtilityBelt is better than alfalfa" | "cowsay"
+#  ____________________________________
+# < UtilityBelt is better than alfalfa >
+#  ------------------------------------
+#         \   ^__^
+#          \  (oo)\_______
+#             (__)\       )\/\
+#                 ||----w |
+#                 ||     ||
+# => nil
+class String
+  def |(cmd)
+    IO.popen(cmd.to_s, 'r+') do |pipe|
+      pipe.write(self)
+      pipe.close_write
+      pipe.read
+    end
+  end
+end
