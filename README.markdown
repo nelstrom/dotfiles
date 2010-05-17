@@ -43,9 +43,8 @@ RUBY
 ====
 
 My preferences for IRB customisations are stored in `dotfiles/irbrc`. To get
-the most from these, you should install the
-[interactive_editor][i_editor] and [awesome_print][ap] gems, by
-running:
+the most from these, you should install the [interactive_editor][i_editor] and
+[awesome_print][ap] gems, by running:
 
     gem install interactive_editor awesome_print
 
