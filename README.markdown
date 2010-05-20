@@ -2,6 +2,12 @@ Installation
 
     git clone git://github.com/nelstrom/dotfiles.git
 
+Where possible, Vim plugins are installed as git submodules. Check these out by
+running the commands:
+
+    git submodule init
+    git submodule update
+
 Create symlinks:
 
     ln -s ~/dotfiles/bashrc ~/.bashrc
@@ -9,6 +15,11 @@ Create symlinks:
     ln -s ~/dotfiles/gvimrc ~/.gvimrc
     ln -s ~/dotfiles/irbrc ~/.irbrc
     ln -s ~/dotfiles/vim ~/.vim
+
+I put Vim's backup and swap files in `~/tmp`, so that directory must exist. To
+be sure, run: 
+
+    mkdir ~/tmp
 
 VIM
 ===
