@@ -1,4 +1,5 @@
-echo "loading .bashrc"
+#echo "loading .bashrc"
+source ~/.profile
 
 # Bash customisations to be syncronised between machines.
 export PS1='\[\e[1;34m\][\u@\h \W]\$\[\e[0m\] '
@@ -25,8 +26,8 @@ alias ta='autotest -rails'
 alias m='rake db:migrate'
 
 # SVN aliases
-alias svnrmd="svn st | grep '^\?' | awk '{print $2}' | xargs svn add"
-alias svnadd="svn st | grep '^\!' | awk '{print $2}' | xargs svn rm"
+alias svnadd="svn st | grep '^\?' | awk '{print $2}' | xargs svn add"
+alias svnrmd="svn st | grep '^\!' | awk '{print $2}' | xargs svn rm"
 
 
 # Reload .bashrc
