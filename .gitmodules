@@ -55,3 +55,6 @@
 [submodule "vim/bundle/gist"]
 	path = vim/bundle/gist
 	url = http://github.com/mattn/gist-vim.git
+[submodule "vim/bundle/vim-markdown-preview"]
+	path = vim/bundle/vim-markdown-preview
+	url = git@github.com:nelstrom/vim-markdown-preview.git
