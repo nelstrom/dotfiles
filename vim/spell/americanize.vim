@@ -61,7 +61,7 @@ endif
 " AE and OE simplifications
 :Abolish -buffer amoeba ameba
 :Abolish -buffer anaemia anemia
-:Abolish -buffer anaes{thesia,thetic,thesiologist} anesthesia{}
+:Abolish -buffer anaesthe{sia,tic,siologist} anesthe{}
 :Abolish -buffer anaesthetist anesthesiologist
 :Abolish -buffer caesium cesium
 :Abolish -buffer diarrhoea diarrhea
