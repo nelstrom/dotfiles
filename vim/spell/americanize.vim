@@ -14,10 +14,13 @@
 " 
 " which is equivalent to manually creating the abbreviations:
 "
-"     :ia colour color
-"     :ia Colour Color
-"     :ia COLOUR COLOR
+"     :iabbrev colour color
+"     :iabbrev Colour Color
+"     :iabbrev COLOUR COLOR
 "
 
 :Abolish behaviour behavior
 :Abolish colour color
+
+" organize, organized, organization, and similar...
+:Abolish {organ,real,recogn}is{e,ed,ation} {}iz{}
