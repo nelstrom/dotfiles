@@ -23,6 +23,10 @@
 "
 "     http://en.wikipedia.org/wiki/American_and_British_English_spelling_differences
 
+if !exists(":Abolish")
+  finish
+endif
+
 " -our to -or
 "  e.g. colour -> color
 "  suffixes: color, colors, colored, colorless, colorist, honorable
