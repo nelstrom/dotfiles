@@ -1,7 +1,7 @@
 " Vim color file
 " Converted from Textmate theme Mac Classic using Coloration v0.2.2 (http://github.com/sickill/coloration)
 
-set background=dark
+set background=light
 highlight clear
 
 if exists("syntax_on")
@@ -14,7 +14,7 @@ hi Cursor  guifg=NONE guibg=#000000 gui=NONE
 hi Visual  guifg=NONE guibg=#c6deff gui=NONE
 hi CursorLine  guifg=NONE guibg=#ededed gui=NONE
 hi CursorColumn  guifg=NONE guibg=#ededed gui=NONE
-hi LineNr  guifg=#808080 guibg=#ffffff gui=NONE
+hi LineNr  guifg=#808080 guibg=#efefef gui=NONE
 hi VertSplit  guifg=#cfcfcf guibg=#cfcfcf gui=NONE
 hi MatchParen  guifg=#0000ff guibg=NONE gui=bold
 hi StatusLine  guifg=#000000 guibg=#cfcfcf gui=bold
@@ -56,7 +56,8 @@ hi Type  guifg=NONE guibg=NONE gui=NONE
 hi Underlined  guifg=NONE guibg=NONE gui=underline
 hi rubyClass  guifg=#0000ff guibg=NONE gui=bold
 hi rubyFunction  guifg=#0000a2 guibg=NONE gui=bold
-hi rubyInterpolationDelimiter  guifg=NONE guibg=NONE gui=NONE
+hi rubyInterpolationDelimiter  guifg=#00bc41 guibg=NONE gui=NONE
+hi rubyInterpolation  guifg=#00bc41 guibg=NONE gui=NONE
 hi rubySymbol  guifg=#c5060b guibg=NONE gui=bold
 hi rubyConstant  guifg=#6d79de guibg=NONE gui=bold
 hi rubyStringDelimiter  guifg=#036a07 guibg=NONE gui=NONE
