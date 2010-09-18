@@ -28,6 +28,15 @@
 "  suffixes: color, colors, colored, colorless, colorist, honorable
 :Abolish -buffer {col,behavi,fav,flav,hon,neighb,rum,lab}our{,s,ed,less,able} {}or{}
 
+" -re to -er
+"  e.g. litre -> liter
+"  suffixes: liter, liters
+:Abolish -buffer {cent,goit,kilomet,lit,lust,mit,nit,reconnoit,saltpet,spect,theat,titre}re{,s} {}er{}
+
+" -ce to -se
+"  e.g. defence -> defense
+:Abolish -buffer {defen,offen,preten}ce {}se
+
 " organize, organized, organization and similar...
 :Abolish -buffer {actual,aggrand,agon,alphabet,antagon,anthropomorph,aphor,apolog,arbor,author,autom,bapt,barbar,brutal,canon,capital,categor,cauter,character,civil,colon,color,compartmental,computer,conceptual,concret,criminal,critic,crystal,demonet,departmental,desensit,destabil,digital,dogmat,dramat,econom,emphas,energ,eulog,euthan,extempor,external,factual,fantas,fertil,fibern,final,formal,fratern,galvan,general,global,harmon,hellen,homogen,hospital,human,hypothes,ideal,immobil,individual,institutional,internal,ion,legal,legitim,lion,material,memor,mesmer,method,moral,motor,national,natural,neutral,normal,notar,organ,ostrac,pagan,pasteur,patron,penal,personal,philosoph,plagiar,polar,popular,pressur,priorit,privat,proselyt,public,pulver,quant,random,rational,real,recogn,regional,satir,sensual,serial,social,special,stabil,standard,steril,stigmat,subsid,summar,symbol,synchron,synthes,terror,theor,total,tranquil,trivial,tyrann,universal,urban,util,vandal,vapor,vasectom,visual,vocal,weather,woman}is{e,ed,er,ation} {}iz{}
 
@@ -54,5 +63,6 @@
 :Abolish -buffer paediatric pediatric
 :Abolish -buffer homoeopath{y,ic} homeopath{}
 :Abolish -buffer mediaeval medieval
+:Abolish -buffer manoeuv{re,res,red} maneuv{er,ers,ered}
 
 :Abolish -buffer moustache mustach
