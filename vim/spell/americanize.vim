@@ -76,4 +76,17 @@
 :Abolish -buffer mediaeval medieval
 :Abolish -buffer manoeuv{re,res,red} maneuv{er,ers,ered}
 
+" Miscellaneous
+:Abolish -buffer cheque{,s,r,rs} check{,s,er,ers}
+:Abolish -buffer chilli chili
+:Abolish -buffer draught{,y,ed} draft{,y,ed}
+:Abolish -buffer kerb curb
+:Abolish -buffer liquorice licorice
+:Abolish -buffer mould{,y} mold{,y}
+:Abolish -buffer moult{,y} molt{,y}
 :Abolish -buffer moustache mustach
+:Abolish -buffer phoney phony
+:Abolish -buffer pyjamas pajamas
+:Abolish -buffer plough{,man} plow{,man}
+:Abolish -buffer sceptic{,al,ism} skeptic{,al,ism}
+:Abolish -buffer tyre{,s} tire{,s}
