@@ -8,5 +8,5 @@ endif
 if &background == "dark"
     hi normal guibg=black
 endif
-set guifont=Monaco:h12
+set guifont=Menlo:h12
 colorscheme blackboard
