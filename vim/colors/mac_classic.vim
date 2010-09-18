@@ -11,14 +11,14 @@ endif
 let g:colors_name = "Mac Classic"
 
 hi Cursor  guifg=NONE guibg=#000000 gui=NONE
-hi Visual  guifg=NONE guibg=#c6deff gui=NONE
+hi Visual  guifg=NONE guibg=#ffce77 gui=NONE
 hi CursorLine  guifg=NONE guibg=#ededed gui=NONE
 hi CursorColumn  guifg=NONE guibg=#ededed gui=NONE
 hi LineNr  guifg=#808080 guibg=#efefef gui=NONE
 hi VertSplit  guifg=#cfcfcf guibg=#cfcfcf gui=NONE
 hi MatchParen  guifg=#0000ff guibg=NONE gui=bold
-hi StatusLine  guifg=#000000 guibg=#cfcfcf gui=bold
-hi StatusLineNC  guifg=#000000 guibg=#cfcfcf gui=NONE
+hi StatusLine  guifg=#000000 guibg=#e3ecfc gui=NONE
+hi StatusLineNC  guifg=#000000 guibg=#efefef gui=NONE
 hi Pmenu  guifg=NONE guibg=NONE gui=NONE
 hi PmenuSel  guifg=NONE guibg=#c6deff gui=NONE
 hi IncSearch  guifg=NONE guibg=#ababff gui=NONE
@@ -40,7 +40,7 @@ hi Function  guifg=#0000a2 guibg=NONE gui=bold
 hi Identifier  guifg=#0000ff guibg=NONE gui=bold
 hi Keyword  guifg=#0000ff guibg=NONE gui=bold
 hi Label  guifg=#036a07 guibg=NONE gui=NONE
-hi NonText  guifg=#bfbfbf guibg=#ededed gui=NONE
+hi NonText  guifg=#dfdfdf guibg=#ffffff gui=NONE
 hi Number  guifg=#0000cd guibg=NONE gui=NONE
 hi Operator  guifg=#0000ff guibg=NONE gui=bold
 hi PreProc  guifg=#0000ff guibg=NONE gui=bold
@@ -67,6 +67,10 @@ hi rubyInclude  guifg=#0000ff guibg=NONE gui=bold
 hi rubyGlobalVariable  guifg=#318495 guibg=NONE gui=NONE
 hi rubyRegexp  guifg=#e18ac7 guibg=NONE gui=NONE
 hi rubyRegexpAnchor  guifg=#e18ac7 guibg=NONE gui=NONE
+hi rubyRegexpQuantifier  guifg=#e18ac7 guibg=NONE gui=NONE
+hi rubyRegexpParens  guifg=#e18ac7 guibg=NONE gui=NONE
+hi rubyRegexpEscape  guifg=#00bc41 guibg=NONE gui=NONE
+hi rubyRegexpCharClass  guifg=#00bc41 guibg=NONE gui=NONE
 hi rubyRegexpDelimiter  guifg=#e18ac7 guibg=NONE gui=NONE
 hi rubyEscape  guifg=#26b31a guibg=NONE gui=NONE
 hi rubyControl  guifg=#0000ff guibg=NONE gui=bold
