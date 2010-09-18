@@ -98,12 +98,31 @@ hi yamlKey  guifg=NONE guibg=NONE gui=NONE
 hi yamlAnchor  guifg=#318495 guibg=NONE gui=NONE
 hi yamlAlias  guifg=#318495 guibg=NONE gui=NONE
 hi yamlDocumentHeader  guifg=NONE guibg=#f2f2f2 gui=NONE
+
+" CSS styling
+hi cssTagName  guifg=NONE guibg=NONE gui=NONE
+hi cssDefinition  guifg=#6e79f1 guibg=NONE gui=NONE
+hi link cssRenderProp cssDefinition
+hi link cssTextProp cssDefinition
+hi link cssFontProp cssDefinition
+hi link cssColorProp cssDefinition
+hi link cssBoxProp cssDefinition
+hi link cssGeneratedContentProp cssDefinition
+hi link cssUIProp cssDefinition
+
+hi cssIdentifier  guifg=NONE guibg=NONE gui=italic
+hi link cssClassName cssIdentifier
+
+hi cssCommonAttr  guifg=#00bc41 guibg=NONE gui=NONE
+hi link cssRenderAttr cssCommonAttr
+hi link cssTextAttr cssCommonAttr
+hi link cssFontAttr cssCommonAttr
+hi link cssGeneratedContentAttr cssCommonAttr
+
 hi cssURL  guifg=NONE guibg=NONE gui=NONE
 hi cssFunctionName  guifg=#3c4c72 guibg=NONE gui=bold
 hi cssColor  guifg=#d51015 guibg=NONE gui=bold
 hi cssPseudoClassId  guifg=NONE guibg=NONE gui=NONE
-hi cssClassName  guifg=NONE guibg=NONE gui=NONE
 hi cssValueLength  guifg=#0000cd guibg=NONE gui=NONE
-hi cssCommonAttr  guifg=#06960e guibg=NONE gui=bold
 hi cssBraces  guifg=NONE guibg=NONE gui=NONE
 
