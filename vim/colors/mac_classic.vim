@@ -57,6 +57,8 @@ hi Title  guifg=#000000 guibg=NONE gui=bold
 hi Todo  guifg=#0066ff guibg=NONE gui=inverse,bold,italic
 hi Type  guifg=NONE guibg=NONE gui=NONE
 hi Underlined  guifg=NONE guibg=NONE gui=underline
+
+" Ruby styles
 hi rubyClass  guifg=#1e39f6 guibg=NONE gui=bold
 hi rubyFunction  guifg=#0000a2 guibg=NONE gui=bold
 hi rubyInterpolationDelimiter  guifg=#00bc41 guibg=NONE gui=NONE
@@ -131,3 +133,12 @@ hi cssValueLength  guifg=#0000cd guibg=NONE gui=NONE
 hi cssBraces  guifg=NONE guibg=NONE gui=NONE
 hi cssImportant  guifg=#1e39f6 guibg=NONE gui=bold
 
+" VIMscript styling
+hi vimGroup  guifg=#007b22 guibg=NONE gui=bold
+hi link vimHiGroup vimGroup
+
+" Markdown
+hi markdownBold gui=bold
+hi markdownItalic gui=italic
+hi markdownCode  guifg=#007b22 guibg=NONE gui=NONE
+hi link markdownCodeBlock markdownCode
