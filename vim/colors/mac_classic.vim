@@ -10,19 +10,22 @@ endif
 
 let g:colors_name = "Mac Classic"
 
-hi Cursor  guifg=NONE guibg=#000000 gui=NONE
-hi Visual  guifg=NONE guibg=#ffce77 gui=NONE
-hi CursorLine  guifg=NONE guibg=#ededed gui=NONE
-hi CursorColumn  guifg=NONE guibg=#ededed gui=NONE
+hi Cursor  guifg=#ffffff guibg=#526CF8 gui=NONE
+hi Visual  guifg=NONE guibg=#c6deff gui=NONE
+hi CursorLine  guifg=NONE guibg=#f0f6ff gui=NONE
+hi CursorColumn  guifg=NONE guibg=#f0f6ff gui=NONE
 hi LineNr  guifg=#808080 guibg=#efefef gui=NONE
-hi VertSplit  guifg=#cfcfcf guibg=#cfcfcf gui=NONE
+hi VertSplit  guifg=#ffffff guibg=#cfcfcf gui=NONE
 hi MatchParen  guifg=#1e39f6 guibg=NONE gui=bold
-hi StatusLine  guifg=#000000 guibg=#e3ecfc gui=NONE
+" Current window StatusLine
+hi StatusLine  guifg=#000000 guibg=#c6deff gui=NONE
+" Non-Current window StatusLine
 hi StatusLineNC  guifg=#000000 guibg=#efefef gui=NONE
 hi Pmenu  guifg=NONE guibg=NONE gui=NONE
 hi PmenuSel  guifg=NONE guibg=#c6deff gui=NONE
-hi IncSearch  guifg=NONE guibg=#ababff gui=NONE
-hi Search  guifg=NONE guibg=#ababff gui=NONE
+" IncSearch is stronger than Search
+hi IncSearch  guifg=NONE guibg=#ffce77 gui=NONE
+hi Search  guifg=NONE guibg=#FFE6BB gui=NONE
 hi Directory  guifg=#d51015 guibg=NONE gui=bold
 hi Folded  guifg=#0066ff guibg=#ffffff gui=NONE
 
@@ -45,7 +48,7 @@ hi Number  guifg=#0000cd guibg=NONE gui=NONE
 hi Operator  guifg=#1e39f6 guibg=NONE gui=bold
 hi PreProc  guifg=#1e39f6 guibg=NONE gui=bold
 hi Special  guifg=#000000 guibg=NONE gui=NONE
-hi SpecialKey  guifg=#bfbfbf guibg=#ededed gui=NONE
+hi SpecialKey  guifg=#dfdfdf guibg=#ffffff gui=NONE
 hi Statement  guifg=#1e39f6 guibg=NONE gui=bold
 hi StorageClass  guifg=#1e39f6 guibg=NONE gui=bold
 hi String  guifg=#036a07 guibg=NONE gui=NONE
