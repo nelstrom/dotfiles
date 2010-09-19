@@ -58,3 +58,6 @@
 [submodule "vim/bundle/vim-markdown-preview"]
 	path = vim/bundle/vim-markdown-preview
 	url = git@github.com:nelstrom/vim-markdown-preview.git
+[submodule "vim/bundle/mac-classic"]
+	path = vim/bundle/mac-classic
+	url = git@github.com:nelstrom/vim-mac-classic-theme.git
