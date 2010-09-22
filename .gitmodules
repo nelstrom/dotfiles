@@ -61,3 +61,6 @@
 [submodule "vim/bundle/mac-classic"]
 	path = vim/bundle/mac-classic
 	url = git@github.com:nelstrom/vim-mac-classic-theme.git
+[submodule "vim/bundle/vim-rake"]
+	path = vim/bundle/vim-rake
+	url = http://github.com/tpope/vim-rake.git
