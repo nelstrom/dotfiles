@@ -8,5 +8,5 @@ endif
 if &background == "dark"
     hi normal guibg=black
 endif
-set guifont=Menlo:h14
-colorscheme blackboard
+set guifont=Inconsolata:h18
+colorscheme mac_classic
