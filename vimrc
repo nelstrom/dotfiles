@@ -133,6 +133,10 @@ nmap <silent> <leader>w :set wrap!<CR>
 nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 command! -nargs=* Wrap set wrap linebreak nolist
+if exists('*HexHighlight()')
+  " http://www.vim.org/scripts/script.php?script_id=2937
+  nmap <leader>h :call HexHighlight()<Return>
+endif
 
 " Mappings {{{1
 " Speed up buffer switching {{{2
