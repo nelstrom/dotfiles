@@ -1,4 +1,4 @@
-" Folding cheet sheet
+" Folding cheet sheet 
 " zR    open all folds
 " zM    close all folds
 " za    toggle fold at cursor position
@@ -133,10 +133,6 @@ nmap <silent> <leader>w :set wrap!<CR>
 nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 command! -nargs=* Wrap set wrap linebreak nolist
-if exists('*HexHighlight()')
-  " http://www.vim.org/scripts/script.php?script_id=2937
-  nmap <leader>h :call HexHighlight()<Return>
-endif
 
 " Mappings {{{1
 " Speed up buffer switching {{{2
@@ -175,7 +171,8 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
+" Shortcuts for visual selections {{{2
+nmap gV `[v`]
 " Easily modify vimrc {{{1
 nmap <leader>v :e $MYVIMRC<CR>
 " http://stackoverflow.com/questions/2400264/is-it-possible-to-apply-vim-configurations-without-restarting/2400289#2400289
@@ -313,15 +310,16 @@ vmap <D-/> ,c<space>gv
 map <D-/> ,c<space>
 
 " Move selection {{{2
-" Move current line down/up
-map <C-Down> ddp
-map <C-Up> dd<Up>P
-" Move visually selected lines down/up
-vmap <C-Down> xp`[V`]
-vmap <C-Up> x<Up>P`[V`]
+  " Move current line down/up
+  map <C-Down> ]e
+  map <C-Up> [e
+  " Move visually selected lines down/up
+  vmap <C-Down> ]egv
+  vmap <C-Up> [egv
 " Move visual selection back/forwards
-vmap <C-Left> x<BS>P`[v`]
-vmap <C-Right> x<Space>P`[v`]
+set ww+=<,>
+vmap <C-Left> x<Left>P`[v`]
+vmap <C-Right> x<Right>P`[v`]
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
 " }}}

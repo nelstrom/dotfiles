@@ -64,3 +64,6 @@
 [submodule "vim/bundle/vim-rake"]
 	path = vim/bundle/vim-rake
 	url = http://github.com/tpope/vim-rake.git
+[submodule "vim/bundle/visincr"]
+	path = vim/bundle/visincr
+	url = http://github.com/vim-scripts/VisIncr.git

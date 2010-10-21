@@ -10,3 +10,7 @@ if &background == "dark"
 endif
 set guifont=Inconsolata:h18
 colorscheme mac_classic
+if exists('*HexHighlight()')
+  " http://www.vim.org/scripts/script.php?script_id=2937
+  nmap <leader>h :call HexHighlight()<Return>
+endif
