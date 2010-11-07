@@ -67,9 +67,6 @@
 [submodule "vim/bundle/visincr"]
 	path = vim/bundle/visincr
 	url = http://github.com/vim-scripts/VisIncr.git
-[submodule "vim/bundle/gundo"]
-	path = vim/bundle/gundo
-	url = http://github.com/sjl/gundo.vim.git
 [submodule "vim/bundle/delimitmate"]
 	path = vim/bundle/delimitmate
 	url = https://github.com/Raimondi/delimitMate.git
