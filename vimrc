@@ -320,6 +320,9 @@ map <D-/> ,c<space>
 set ww+=<,>
 vmap <C-Left> x<Left>P`[v`]
 vmap <C-Right> x<Right>P`[v`]
+" Configure plugins {{{1
+" Gundo.vim {{{2
+map <Leader>u :GundoToggle<CR>
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
 " }}}
