@@ -8,9 +8,9 @@ set cpo&vim
 AddTabularPattern! colon /:\zs
 AddTabularPattern! commas /,\zs/l0l1
 
-nmap <leader>t| :Tabularize/|
-nmap <leader>ts: :Tabularize colon
-nmap <leader>ts, :Tabularize commas
+nmap <leader>t<bar> :Tabularize /<bar><CR>
+nmap <leader>ts: :Tabularize colon<CR>
+nmap <leader>ts, :Tabularize commas<CR>
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
