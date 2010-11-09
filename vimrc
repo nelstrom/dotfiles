@@ -173,8 +173,14 @@ map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Shortcuts for visual selections {{{2
 nmap gV `[v`]
+" TextObject tweaks {{{1
+nnoremap Vit vitVkoj
+nnoremap Vat vatV
 " Insert mode mappings {{{1
+" emacs style jump to end of line
 imap <C-e> <C-o>A
+" Open line above (ctrl-shift-o much easier than ctrl-o shift-O)
+imap <C-S-o> <C-o>O
 " Easily modify vimrc {{{1
 nmap <leader>v :e $MYVIMRC<CR>
 " http://stackoverflow.com/questions/2400264/is-it-possible-to-apply-vim-configurations-without-restarting/2400289#2400289
@@ -288,6 +294,22 @@ function! VisualSearch(direction) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+" Swap words in a single substitution command {{{2
+" http://stackoverflow.com/questions/765894/can-i-substitute-multiple-items-in-a-single-regular-expression-in-vim-or-perl/766093#766093
+function! Refactor(dict) range
+  execute a:firstline . ',' . a:lastline .  's/\C\<\%(' . join(keys(a:dict),'\|'). '\)\>/\='.string(a:dict).'[submatch(0)]/ge'
+endfunction
+command! -range=% -nargs=1 Refactor :<line1>,<line2>call Refactor(<args>)
+
+" Running :Refactor {'quick':'slow', 'lazy':'energetic'}  will change the following text:
+"    The quick brown fox ran quickly next to the lazy brook.
+"into:
+"    The slow brown fox ran slowly next to the energetic brook.
+
+" TODO: create a :Swap command, which turns:
+"    :Swap(portrait,landscape)
+" into
+"    :Refactor {'portrait':'landscape', 'landscape':'portrait'}
 
 "Basically you press * or # to search for the current selection
 "then 'n' should search forward, 'N' should search backwards.
