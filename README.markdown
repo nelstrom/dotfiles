@@ -51,6 +51,19 @@ as follows:
     git add .
     git ci -m "Added the javascript bundle"
 
+### Command-t
+
+The command-t extension require Vim with ruby support, and furthermore, the
+ruby code depends on a C extension for extra speed. The usual pathogen
+installation proceedure didn't work for me, but I followed these steps to make
+it work:
+
+    cd ~/dotfiles/vim/bundle/command-t/ruby/command-t
+    ruby extconf.rb
+    make
+
+That did the trick.
+
 RUBY
 ====
 
