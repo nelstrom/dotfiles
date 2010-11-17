@@ -134,6 +134,7 @@ nmap <silent> <leader>w :set wrap!<CR>
 nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 command! -nargs=* Wrap set wrap linebreak nolist
+command! -nargs=* Maxsize set columns=1000 lines=1000
 
 " Mappings {{{1
 " Speed up buffer switching {{{2
