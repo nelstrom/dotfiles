@@ -85,3 +85,6 @@
 [submodule "vim/bundle/textobj-user"]
 	path = vim/bundle/textobj-user
 	url = https://github.com/kana/vim-textobj-user.git
+[submodule "vim/bundle/textobj-entire"]
+	path = vim/bundle/textobj-entire
+	url = https://github.com/kana/vim-textobj-entire.git
