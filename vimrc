@@ -324,7 +324,8 @@ vnoremap <silent> gv :call VisualSearch('gv')<CR>
 " Status line {{{1
 " Good article on setting a statusline:
 "   http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
-
+" Always show the status line (even if no split windows)
+set laststatus=2
 " Mappings for a recovering TextMate user {{{1
 " Indentation {{{2
 nmap <D-[> <<
