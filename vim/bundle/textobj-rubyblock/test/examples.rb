@@ -16,7 +16,7 @@ end
 
 class Foo
   # [cursor]
-  # Should select Foo class
+  # vir/var should select Foo class
   if true
     # do not select inner block only
     # search forwards.
@@ -26,7 +26,17 @@ class Foo
   end
 end
 
-[1,2,3,4,5].map |i| do
+module Foo
+  class Bar
+    def Baz
+      [1,2,3].each do |i|
+        i + 1
+      end
+    end
+  end
+end
+
+[1,2,3,4,5].map do |i|
   # don't forget that a method can be called on 'end'!
   i + 1
 end.max
