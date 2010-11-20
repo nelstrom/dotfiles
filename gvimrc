@@ -8,7 +8,7 @@ endif
 if &background == "dark"
     hi normal guibg=black
 endif
-set guifont=Inconsolata:h18
+set guifont=Inconsolata:h16
 colorscheme mac_classic
 if exists('*HexHighlight()')
   " http://www.vim.org/scripts/script.php?script_id=2937
