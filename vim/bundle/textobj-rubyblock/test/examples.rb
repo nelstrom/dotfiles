@@ -1,6 +1,17 @@
 class Foo
+  # words containing 'end' to be ignored
+  roadend
+  endofline
+end
+
+class Foo
   # [cursor]
   # Ignore the word 'end' if it appears in a comment!
+end
+
+class Foo
+  # [cursor]
+  "one #{end}" # the '#' symbol is not always a comment!
 end
 
 class Foo
