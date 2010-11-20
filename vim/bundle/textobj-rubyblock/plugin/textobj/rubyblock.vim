@@ -25,9 +25,11 @@ endfunction
 function! s:select_i()
   call search('\<end\>', 'cW')
   let end_pos = getpos('.')
+  let end_pos[1] = end_pos[1] - 1
 
   normal %
   let start_pos = getpos('.')
+  let start_pos[1] = start_pos[1] + 1
 
   return ['V', start_pos, end_pos]
 endfunction
