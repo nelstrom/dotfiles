@@ -1,5 +1,10 @@
 class Foo
   # [cursor]
+  # Ignore the word 'end' if it appears in a comment!
+end
+
+class Foo
+  # [cursor]
   # Should select Foo class
   if true
     # do not select inner block only
