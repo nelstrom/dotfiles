@@ -13,7 +13,7 @@ call textobj#user#plugin('rubyblock', {
 
 " Misc.  "{{{1
 function! s:select_a()
-  call search('\v^[^#]*\zs<end>', 'cW')
+  call searchpair('\v^[^#]*\zs(<if>|<do>|<module>|<class>)','','\v^[^#]*\zs<end>', 'cW')
   let end_pos = getpos('.')
 
   normal %
@@ -23,7 +23,7 @@ function! s:select_a()
 endfunction
 
 function! s:select_i()
-  call search('\v^[^#]*\zs<end>', 'cW')
+  call searchpair('\v^[^#]*\zs(<if>|<do>|<module>|<class>)','','\v^[^#]*\zs<end>', 'cW')
   let end_pos = getpos('.')
   let end_pos[1] = end_pos[1] - 1
 
