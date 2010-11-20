@@ -352,6 +352,14 @@ vmap <C-Right> x<Right>P`[v`]
 " Configure plugins {{{1
 " Gundo.vim {{{2
 map <Leader>u :GundoToggle<CR>
+
+" TextObject customizations {{{2
+" This prevents `ie` and `ae` from bing mapped to entire
+"let g:textobj_entire_no_default_key_mappings = 1
+" But how do you create new mappings?
+"TextobjEntireDefaultKeyMappings! aa <Plug>textobj-entire-a
+" }}}
+
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
 " }}}
