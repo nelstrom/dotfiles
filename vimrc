@@ -354,10 +354,13 @@ vmap <C-Right> x<Right>P`[v`]
 map <Leader>u :GundoToggle<CR>
 
 " TextObject customizations {{{2
-" This prevents `ie` and `ae` from bing mapped to entire
-"let g:textobj_entire_no_default_key_mappings = 1
-" But how do you create new mappings?
-"TextobjEntireDefaultKeyMappings! aa <Plug>textobj-entire-a
+" Entire text object {{{3
+" Map text-object for entire buffer to `ia` and `aa`.
+let g:textobj_entire_no_default_key_mappings = 1
+xmap aa  <Plug>(textobj-entire-a)
+omap aa  <Plug>(textobj-entire-a)
+xmap ia  <Plug>(textobj-entire-i)
+omap ia  <Plug>(textobj-entire-i)
 " }}}
 
 "  Modelines: {{{1
