@@ -125,6 +125,15 @@ if has("autocmd")
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
   autocmd FileType markdown setlocal wrap linebreak nolist
   autocmd BufNewFile,BufRead *.rss setfiletype xml
+  ".pml is automatically set to 'promela'. Override to use XML
+  " lifted from: https://github.com/tpope/vim-markdown/blob/34e28b3f6f6d702ff2963b8196eccae9344ed4bc/ftdetect/markdown.vim
+  autocmd BufNewFile,BufRead *.pml
+        \ if &ft =~# '^\%(promela\)$' |
+        \   set ft=xml |
+        \ else |
+        \   setf xml |
+        \ endif
+
 endif
 
 " Toggles & Switches (Leader commands) {{{1
