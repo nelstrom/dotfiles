@@ -185,8 +185,8 @@ map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Shortcuts for visual selections {{{2
 nmap gV `[v`]
 " TextObject tweaks {{{1
-nnoremap Vit vitVkoj
-nnoremap Vat vatV
+nnoremap viT vitVkoj
+nnoremap vaT vatV
 " Insert mode mappings {{{1
 " emacs style jump to end of line
 imap <C-e> <C-o>A
