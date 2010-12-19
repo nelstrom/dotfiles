@@ -1,0 +1,11 @@
+--langdef=pml
+--langmap=pml:.pml
+--regex-pml=/<title>(.*)<\/title>/\1/t,title/
+--regex-pml=/id\="([a-z\.]+)"/\1/a,anchor/
+
+--langdef=markdown
+--langmap=markdown:.md.markdown.mdown.mkd.mkdn
+--regex-markdown=/^#[ \t]+(.*)/\1/h,heading1/
+--regex-markdown=/^##[ \t]+(.*)/\1/h,heading2/
+--regex-markdown=/^###[ \t]+(.*)/\1/h,heading3/
+

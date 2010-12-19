@@ -16,6 +16,7 @@ Create symlinks:
     ln -s ~/dotfiles/gvimrc ~/.gvimrc
     ln -s ~/dotfiles/irbrc ~/.irbrc
     ln -s ~/dotfiles/vim ~/.vim
+    ln -s ~/dotfiles/ctags ~/.ctags
 
 I put Vim's backup and swap files in `~/tmp`, so that directory must exist. To
 be sure, run: 
