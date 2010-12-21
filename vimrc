@@ -378,6 +378,26 @@ xmap ia  <Plug>(textobj-entire-i)
 omap ia  <Plug>(textobj-entire-i)
 " }}}
 
+function! PmlFolds()
+  if match(getline(v:lnum), "<sect1") >= 0
+    return ">1"
+  elseif match(getline(v:lnum), "</sect1") >= 0
+    return "<1"
+  elseif match(getline(v:lnum), "<sect2") >= 0
+    return ">2"
+  elseif match(getline(v:lnum), "</sect2") >= 0
+    return "<2"
+  elseif match(getline(v:lnum), "<sect3") >= 0
+    return ">3"
+  elseif match(getline(v:lnum), "</sect3") >= 0
+    return "<3"
+  else
+    return "="
+  endif
+endfunction
+autocmd BufNewFile,BufRead *.pml set foldmethod=expr
+autocmd BufNewFile,BufRead *.pml set foldexpr=PmlFolds()
+
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
 " }}}
