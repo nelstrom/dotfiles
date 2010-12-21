@@ -399,7 +399,7 @@ function! PmlFoldText()
   " default:
   " --- 52 lines: <sect2>---------
   " Want:
-  " --- 52 lines: ## Choosing a dictionary ## -------------
+  " 1: Vim's spell checker                                   52 lines
   let foldedlinecount = v:foldend - v:foldstart
   let line = getline(v:foldstart)
   let title = "<Untitled>"
@@ -414,7 +414,7 @@ function! PmlFoldText()
     let counter = counter + 1
     let linenum = linenum + 1
   endwhile
-  return title . " " . foldedlinecount . " lines"
+  return printf("%-60s %6s lines", title, foldedlinecount)
 endfunction
 autocmd BufNewFile,BufRead *.pml set foldmethod=expr
 autocmd BufNewFile,BufRead *.pml setlocal foldexpr=PmlFolds()
