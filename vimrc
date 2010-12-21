@@ -395,8 +395,30 @@ function! PmlFolds()
     return "="
   endif
 endfunction
+function! PmlFoldText()
+  " default:
+  " --- 52 lines: <sect2>---------
+  " Want:
+  " --- 52 lines: ## Choosing a dictionary ## -------------
+  let foldedlinecount = v:foldend - v:foldstart
+  let line = getline(v:foldstart)
+  let title = "<Untitled>"
+  let counter = 0
+  let linenum = v:foldstart
+  while title == "<Untitled>" && counter < 10
+    let line = getline( linenum )
+    let sectTitle = matchstr(line, "<title>\\zs.\\+\\ze</title>")
+    if sectTitle != ""
+      let title = sectTitle
+    endif
+    let counter = counter + 1
+    let linenum = linenum + 1
+  endwhile
+  return title . " " . foldedlinecount . " lines"
+endfunction
 autocmd BufNewFile,BufRead *.pml set foldmethod=expr
-autocmd BufNewFile,BufRead *.pml set foldexpr=PmlFolds()
+autocmd BufNewFile,BufRead *.pml setlocal foldexpr=PmlFolds()
+autocmd BufNewFile,BufRead *.pml setlocal foldtext=PmlFoldText()
 
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
