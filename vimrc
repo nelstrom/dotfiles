@@ -422,6 +422,8 @@ function! PmlFoldText()
   elseif v:foldlevel == 3
     let leader = printf("%-6s%-44s", v:foldlevel, title)
   end
+  " TODO: figure out why example (:h fold-foldtext) uses v:folddashes:
+  "   return v:folddashes . sub
   return printf("%s %6s lines", leader, foldedlinecount)
 endfunction
 autocmd BufNewFile,BufRead *.pml set foldmethod=expr
