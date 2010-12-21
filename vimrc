@@ -414,7 +414,15 @@ function! PmlFoldText()
     let counter = counter + 1
     let linenum = linenum + 1
   endwhile
-  return printf("%-60s %6s lines", title, foldedlinecount)
+  let leader = printf("%-10s", v:foldlevel)
+  if v:foldlevel == 1
+    let leader = printf("%-2s%-48s", v:foldlevel, title)
+  elseif v:foldlevel == 2
+    let leader = printf("%-4s%-46s", v:foldlevel, title)
+  elseif v:foldlevel == 3
+    let leader = printf("%-6s%-44s", v:foldlevel, title)
+  end
+  return printf("%s %6s lines", leader, foldedlinecount)
 endfunction
 autocmd BufNewFile,BufRead *.pml set foldmethod=expr
 autocmd BufNewFile,BufRead *.pml setlocal foldexpr=PmlFolds()
