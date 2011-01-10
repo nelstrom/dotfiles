@@ -103,3 +103,6 @@
 [submodule "vim/bundle/taglist"]
 	path = vim/bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "vim/bundle/project"]
+	path = vim/bundle/project
+	url = https://github.com/vim-scripts/project.tar.gz.git
