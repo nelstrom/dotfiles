@@ -378,6 +378,58 @@ xmap ia  <Plug>(textobj-entire-i)
 omap ia  <Plug>(textobj-entire-i)
 " }}}
 
+function! PmlFolds()
+  if match(getline(v:lnum), "<sect1") >= 0
+    return ">1"
+  elseif match(getline(v:lnum), "</sect1") >= 0
+    return "<1"
+  elseif match(getline(v:lnum), "<sect2") >= 0
+    return ">2"
+  elseif match(getline(v:lnum), "</sect2") >= 0
+    return "<2"
+  elseif match(getline(v:lnum), "<sect3") >= 0
+    return ">3"
+  elseif match(getline(v:lnum), "</sect3") >= 0
+    return "<3"
+  else
+    return "="
+  endif
+endfunction
+function! PmlFoldText()
+  " default:
+  " --- 52 lines: <sect2>---------
+  " Want:
+  " 1: Vim's spell checker                                   52 lines
+  let foldedlinecount = v:foldend - v:foldstart
+  let line = getline(v:foldstart)
+  let title = "<Untitled>"
+  let counter = 0
+  let linenum = v:foldstart
+  while title == "<Untitled>" && counter < 10
+    let line = getline( linenum )
+    let sectTitle = matchstr(line, "<title>\\zs.\\+\\ze</title>")
+    if sectTitle != ""
+      let title = sectTitle
+    endif
+    let counter = counter + 1
+    let linenum = linenum + 1
+  endwhile
+  let leader = printf("%-10s", v:foldlevel)
+  if v:foldlevel == 1
+    let leader = printf("%-2s%-48s", v:foldlevel, title)
+  elseif v:foldlevel == 2
+    let leader = printf("%-4s%-46s", v:foldlevel, title)
+  elseif v:foldlevel == 3
+    let leader = printf("%-6s%-44s", v:foldlevel, title)
+  end
+  " TODO: figure out why example (:h fold-foldtext) uses v:folddashes:
+  "   return v:folddashes . sub
+  return printf("%s %6s lines", leader, foldedlinecount)
+endfunction
+autocmd BufNewFile,BufRead *.pml set foldmethod=expr
+autocmd BufNewFile,BufRead *.pml setlocal foldexpr=PmlFolds()
+autocmd BufNewFile,BufRead *.pml setlocal foldtext=PmlFoldText()
+
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
 " }}}
