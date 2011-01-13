@@ -106,3 +106,6 @@
 [submodule "vim/bundle/project"]
 	path = vim/bundle/project
 	url = https://github.com/vim-scripts/project.tar.gz.git
+[submodule "vim/bundle/pml"]
+	path = vim/bundle/pml
+	url = git@github.com:nelstrom/vim-pml.git
