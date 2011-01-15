@@ -109,3 +109,6 @@
 [submodule "vim/bundle/pml"]
 	path = vim/bundle/pml
 	url = git@github.com:nelstrom/vim-pml.git
+[submodule "vim/bundle/indent-guides"]
+	path = vim/bundle/indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
