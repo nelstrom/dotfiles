@@ -109,3 +109,6 @@
 [submodule "vim/bundle/indent-guides"]
 	path = vim/bundle/indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "vim/bundle/gundo"]
+	path = vim/bundle/gundo
+	url = https://github.com/sjl/gundo.vim.git
