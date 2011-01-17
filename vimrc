@@ -181,6 +181,13 @@ map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Shortcuts for visual selections {{{2
 nmap gV `[v`]
+" Alignment commands {{{1
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
 " TextObject tweaks {{{1
 nnoremap viT vitVkoj
 nnoremap vaT vatV
