@@ -70,9 +70,6 @@
 [submodule "vim/bundle/delimitmate"]
 	path = vim/bundle/delimitmate
 	url = https://github.com/Raimondi/delimitMate.git
-[submodule "vim/bundle/gundo"]
-	path = vim/bundle/gundo
-	url = git@github.com:nelstrom/gundo.vim.git
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
