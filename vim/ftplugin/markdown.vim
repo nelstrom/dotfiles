@@ -18,9 +18,8 @@ endfunction
 
 function! MarkdownFoldText()
   let foldedlinecount = v:foldend - v:foldstart
-  let linenum = v:foldstart
-  let title = "Untitled"
-  return "+" . v:folddashes . " " . foldedlinecount . " " . title
+  let title = getline( v:foldstart )
+  return title . "  [" . foldedlinecount . " lines] "
 endfunction
 
 setlocal foldmethod=expr
