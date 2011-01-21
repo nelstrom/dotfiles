@@ -115,6 +115,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set hidden
+set nojoinspaces
 set listchars=tab:▸\ ,eol:¬
 "set spelllang=en_gb
 " Put swap files in /tmp file
