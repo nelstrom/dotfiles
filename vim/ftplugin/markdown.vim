@@ -1,4 +1,4 @@
-function! MarkdownFolds()
+function! NestedMarkdownFolds()
   if match(getline(v:lnum), "^#\\{6}") >= 0
     return ">6"
   elseif match(getline(v:lnum), "^#\\{5}") >= 0
@@ -16,6 +16,14 @@ function! MarkdownFolds()
   endif
 endfunction
 
+function! FlatMarkdownFolds()
+  if match(getline(v:lnum), "^#") >= 0
+    return ">1"
+  else
+    return "="
+  endif
+endfunction
+
 function! MarkdownFoldText()
   let foldedlinecount = v:foldend - v:foldstart
   let title = getline( v:foldstart )
@@ -23,5 +31,19 @@ function! MarkdownFoldText()
 endfunction
 
 setlocal foldmethod=expr
-setlocal foldexpr=MarkdownFolds()
+setlocal foldexpr=FlatMarkdownFolds()
 setlocal foldtext=MarkdownFoldText()
+
+function! ToggleMarkdownFoldexpr()
+  echohl ModeMsg
+  if &foldexpr == 'FlatMarkdownFolds()'
+    setlocal foldexpr=NestedMarkdownFolds()
+    echon 'Nested folding'
+  else
+    setlocal foldexpr=FlatMarkdownFolds()
+    echon 'Flat folding'
+  endif
+  echohl None
+endfunction
+
+command! -nargs=* FoldToggle call ToggleMarkdownFoldexpr()
