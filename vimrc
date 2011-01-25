@@ -126,6 +126,7 @@ if has("autocmd")
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
   autocmd FileType markdown setlocal wrap linebreak nolist
   autocmd BufNewFile,BufRead *.rss setfiletype xml
+  autocmd FileType ruby :Abolish -buffer initialise initialize
 endif
 
 " Toggles & Switches (Leader commands) {{{1
