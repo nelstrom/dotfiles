@@ -117,6 +117,7 @@ set expandtab
 set hidden
 set nojoinspaces
 set listchars=tab:▸\ ,eol:¬
+set wildmode=longest,list
 "set spelllang=en_gb
 " Put swap files in /tmp file
 set backupdir=~/tmp
