@@ -355,6 +355,9 @@ vmap <D-]> >gv
 vmap <D-/> ,c<space>gv
 map <D-/> ,c<space>
 
+" Duplicate selection {{{2
+"vmap <S-C-D> :copy'> <CR>V`[o
+"nmap <S-C-D> :copy .<CR>
 " Move selection {{{2
   " Move current line down/up
   map <C-Down> ]e
