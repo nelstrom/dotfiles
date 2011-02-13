@@ -123,7 +123,7 @@ set wildmode=longest,list
 set backupdir=~/tmp
 set directory=~/tmp
 if has("autocmd")
-  autocmd FileType html,css,scss,ruby,pml,yaml,coffee setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType html,css,scss,ruby,pml,yaml,coffee,vim setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
   autocmd FileType markdown setlocal wrap linebreak nolist
   autocmd BufNewFile,BufRead *.rss setfiletype xml
