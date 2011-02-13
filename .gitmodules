@@ -121,3 +121,6 @@
 [submodule "vim/bundle/ReplaceWithRegister"]
 	path = vim/bundle/ReplaceWithRegister
 	url = https://github.com/vim-scripts/ReplaceWithRegister.git
+[submodule "vim/bundle/visual-star-search"]
+	path = vim/bundle/visual-star-search
+	url = https://github.com/bronson/vim-visual-star-search.git
