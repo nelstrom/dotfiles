@@ -215,7 +215,7 @@ endif
 " Custom commands and functions {{{1
 " Create a :Quickfixdo command, to match :argdo/bufdo/windo
 " Define a command to make it easier to use
-command! -nargs=* Qargs call QuickfixFilenames()
+command! -nargs=* Qargs execute 'args ' . QuickfixFilenames()
 function! QuickfixFilenames()
   " Building a hash ensures we get each buffer only once
   let buffer_numbers = {}
