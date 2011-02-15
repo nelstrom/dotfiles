@@ -183,6 +183,7 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>er :e <C-R>=expand("%:r")."."<CR>
 " Shortcuts for visual selections {{{2
 nmap gV `[v`]
 " Alignment commands {{{1
