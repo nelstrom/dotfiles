@@ -1,0 +1,27 @@
+" UNRELATED! 
+" Bookmark this: http://www.w3.org/TR/mwabp/
+" vim -u NONE launches vim without a vimrc file
+" vim -u multimap-vimrc launches vim using this as a vimrc
+" Essentials {{{
+" vim:foldmethod=marker
+set nocp
+set go-=T
+set visualbell t_vb=
+set guifont=monaco:h20
+" }}}
+" Lowercase and uppercase letters, both recognised
+nmap <d-i> :echo "cmd-i was pressed"<CR>
+nmap <d-I> :echo "cmd-I was pressed"<CR>
+" these do nothing:
+nmap <m-i> :echo "alt-i was pressed"<CR>
+nmap <m-I> :echo "alt-I was pressed"<CR>
+nmap <d-a-i> :echo "cmd-alt-i was pressed"<CR>
+nmap <D-S-i> :echo "cmd-shift-i was pressed"<CR>
+
+nmap <S-D-'> :echo "cmd-shift-' was pressed"<CR>
+nmap <A-D-'> :echo "cmd-alt-' was pressed"<CR>
+nmap <A-C-'> :echo "cmd-alt-' was pressed"<CR>
+
+map <D-}> :echo "cmd-} was pressed"<CR>
+map <D-S-]> :echo "cmd-shift-] was pressed"<CR>
+map <D-S-[> :echo "cmd-shift-[ was pressed"<CR>
