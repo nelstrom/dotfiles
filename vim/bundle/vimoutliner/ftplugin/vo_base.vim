@@ -542,8 +542,6 @@ endif
 " within the same buffer. Using :e has demonstrates this.
 set foldtext=MyFoldText()
 
-setlocal fillchars=|, 
-
 endif " if !exists("loaded_vimoutliner_functions")
 " End Vim Outliner Functions
 
@@ -587,8 +585,6 @@ else
 endif
 
 " Steve's additional mappings start here
-map <buffer>   <C-K>         <C-]>
-map <buffer>   <C-N>         <C-T>
 map <buffer>   <localleader>0           :set foldlevel=99999<CR>
 map <buffer>   <localleader>9           :set foldlevel=8<CR>
 map <buffer>   <localleader>8           :set foldlevel=7<CR>
