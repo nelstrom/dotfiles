@@ -209,7 +209,7 @@ nmap <leader>v :e $MYVIMRC<CR>
 if has("autocmd")
   augroup myvimrchooks
     au!
-    autocmd bufwritepost .vimrc source ~/.vimrc
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
   augroup END
 endif
 
