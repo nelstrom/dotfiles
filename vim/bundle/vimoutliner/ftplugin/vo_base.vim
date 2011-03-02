@@ -73,12 +73,10 @@ let use_space_colon=0
 
 " VimOutliner Standard Settings {{{1
 setlocal autoindent	
-setlocal backspace=2
 setlocal wrapmargin=5
 setlocal wrap!
 setlocal tw=78
 setlocal noexpandtab
-setlocal nosmarttab
 setlocal softtabstop=0 
 setlocal foldlevel=20
 setlocal foldcolumn=1		" turns on "+" at the begining of close folds
