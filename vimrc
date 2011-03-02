@@ -326,33 +326,6 @@ function! Preserve(command)
 endfunction
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 nmap _= :call Preserve("normal gg=G")<CR>
-
-" Search for current visual selection with */# {{{2
-" Tip tip from: http://amix.dk/blog/viewEntry/19334
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction 
-
-function! VisualSearch(direction) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", '\\/.*$^~[]')
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'b'
-        execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
-        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
-    elseif a:direction == 'f'
-        execute "normal /" . l:pattern . "^M"
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
 " Swap words in a single substitution command {{{2
 " http://stackoverflow.com/questions/765894/can-i-substitute-multiple-items-in-a-single-regular-expression-in-vim-or-perl/766093#766093
 function! Refactor(dict) range
@@ -369,12 +342,6 @@ command! -range=% -nargs=1 Refactor :<line1>,<line2>call Refactor(<args>)
 "    :Swap(portrait,landscape)
 " into
 "    :Refactor {'portrait':'landscape', 'landscape':'portrait'}
-
-"Basically you press * or # to search for the current selection
-"then 'n' should search forward, 'N' should search backwards.
-vnoremap <silent> * :call VisualSearch('f')<CR>
-vnoremap <silent> # :call VisualSearch('b')<CR>
-vnoremap <silent> gv :call VisualSearch('gv')<CR>
 
 " Status line {{{1
 " Good article on setting a statusline:
