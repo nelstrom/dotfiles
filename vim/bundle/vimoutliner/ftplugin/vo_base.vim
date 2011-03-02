@@ -67,9 +67,6 @@ let b:current_syntax = "outliner"
 
 let maplocalleader = ",,"		" this is prepended to VO key mappings
 
-setlocal ignorecase			" searches ignore case
-setlocal smartcase			" searches use smart case
-
 let use_space_colon=0
 
 " End User Preferences
