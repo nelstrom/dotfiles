@@ -179,10 +179,11 @@ nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
 " Shortcuts for opening file in same directory as current file {{{2
-map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
-map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
-map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
-map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
 map <leader>er :e <C-R>=expand("%:r")."."<CR>
 " Shortcuts for visual selections {{{2
 nmap gV `[v`]
