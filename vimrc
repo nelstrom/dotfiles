@@ -388,6 +388,8 @@ omap aa  <Plug>(textobj-entire-a)
 xmap ia  <Plug>(textobj-entire-i)
 omap ia  <Plug>(textobj-entire-i)
 " }}}
+" Space.vim {{{2
+let g:space_disable_select_mode=1
 
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
