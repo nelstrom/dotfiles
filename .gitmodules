@@ -64,9 +64,6 @@
 [submodule "vim/bundle/visincr"]
 	path = vim/bundle/visincr
 	url = http://github.com/vim-scripts/VisIncr.git
-[submodule "vim/bundle/delimitmate"]
-	path = vim/bundle/delimitmate
-	url = https://github.com/Raimondi/delimitMate.git
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
