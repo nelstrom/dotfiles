@@ -40,5 +40,15 @@ alias g='git'
 # Vim aliases
 alias rvim='mvim --remote-silent '
 
+# Functions
+# Fuzzy cd
+# Usage:
+#    cdf public
+# Changes to repos-public directory.
+# http://dpaste.org/P59h/
+function cdf() {
+  cd *$1*/
+}
+
 # Reload .bashrc
 alias refresh='. ~/.bashrc'
