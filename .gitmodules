@@ -124,3 +124,6 @@
 [submodule "vim/bundle/visual-star-search"]
 	path = vim/bundle/visual-star-search
 	url = git@github.com:nelstrom/vim-visual-star-search.git
+[submodule "vim/bundle/space"]
+	path = vim/bundle/space
+	url = git://github.com/kongo2002/vim-space.git
