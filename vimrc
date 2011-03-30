@@ -391,6 +391,7 @@ omap ia  <Plug>(textobj-entire-i)
 " }}}
 " Space.vim {{{2
 let g:space_disable_select_mode=1
+let g:space_no_search = 1
 
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
