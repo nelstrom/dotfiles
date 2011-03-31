@@ -124,3 +124,6 @@
 [submodule "vim/bundle/space"]
 	path = vim/bundle/space
 	url = git://github.com/kongo2002/vim-space.git
+[submodule "vim/bundle/easymotion"]
+	path = vim/bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
