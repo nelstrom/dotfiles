@@ -405,6 +405,10 @@ endif
 " EasyMotion {{{2
 let g:EasyMotion_leader_key = ',,'
 
+" Vim wiki {{{2
+let g:vimwiki_menu=''
+" NERDcommenter {{{2
+let g:NERDMenuMode=0
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
 " }}}
