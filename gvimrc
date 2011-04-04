@@ -1,11 +1,12 @@
 set go-=T
 set bg=dark
 
-if &background == "dark"
-    hi normal guibg=black
-endif
+"if &background == "dark"
+    "hi normal guibg=black
+"endif
 set guifont=Monaco:h14
-colorscheme mac_classic
+colorscheme solarized
+
 if exists('*HexHighlight()')
   " http://www.vim.org/scripts/script.php?script_id=2937
   nmap <leader>h :call HexHighlight()<Return>

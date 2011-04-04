@@ -129,6 +129,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.rss setfiletype xml
   autocmd BufNewFile,BufRead Rakefile,Capfile,Gemfile,Termfile,config.ru setfiletype ruby
   autocmd FileType ruby :Abolish -buffer initialise initialize
+  autocmd FileType vo_base :colorscheme solarized
 endif
 
 " Toggles & Switches (Leader commands) {{{1
@@ -216,7 +217,7 @@ if has("autocmd")
 endif
 
 " Custom commands and functions {{{1
-" Create a :Quickfixdo command, to match :argdo/bufdo/windo
+" Create a :Quickfixdo command, to match :argdo/bufdo/windo {{{2
 " Define a command to make it easier to use
 command! -nargs=* Qargs execute 'args ' . QuickfixFilenames()
 function! QuickfixFilenames()
@@ -392,6 +393,15 @@ omap ia  <Plug>(textobj-entire-i)
 " Space.vim {{{2
 let g:space_disable_select_mode=1
 let g:space_no_search = 1
+
+" Solarized {{{2
+set background=light
+colorscheme solarized
+if has("autocmd")
+  " For some reason, opening a vimoutliner file switches to another
+  " colorscheme. This prevents that from happening.
+  autocmd FileType vo_base :colorscheme solarized
+endif
 
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
