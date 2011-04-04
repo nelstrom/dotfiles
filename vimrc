@@ -402,6 +402,8 @@ if has("autocmd")
   " colorscheme. This prevents that from happening.
   autocmd FileType vo_base :colorscheme solarized
 endif
+" EasyMotion {{{2
+let g:EasyMotion_leader_key = ',,'
 
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
