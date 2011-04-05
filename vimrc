@@ -402,6 +402,17 @@ if has("autocmd")
   " colorscheme. This prevents that from happening.
   autocmd FileType vo_base :colorscheme solarized
 endif
+function! ToggleBackground()
+    if (g:solarized_style=="dark")
+    let g:solarized_style="light"
+    colorscheme solarized
+else
+    let g:solarized_style="dark"
+    colorscheme solarized
+endif
+endfunction
+command! Togbg call ToggleBackground()
+
 " EasyMotion {{{2
 let g:EasyMotion_leader_key = ',,'
 
