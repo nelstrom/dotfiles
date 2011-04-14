@@ -189,6 +189,9 @@ map <leader>et :tabe %%
 map <leader>er :e <C-R>=expand("%:r")."."<CR>
 " Shortcuts for visual selections {{{2
 nmap gV `[v`]
+" Substitute command repetition {{{2
+nnoremap & :~&<Enter>
+vnoremap & :~&<Enter>
 " Alignment commands {{{1
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
