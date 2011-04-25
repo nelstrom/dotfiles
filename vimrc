@@ -398,24 +398,10 @@ let g:space_disable_select_mode=1
 let g:space_no_search = 1
 
 " Solarized {{{2
+let g:solarized_visibility =  "low"
 set background=light
 colorscheme solarized
-if has("autocmd")
-  " For some reason, opening a vimoutliner file switches to another
-  " colorscheme. This prevents that from happening.
-  autocmd FileType vo_base :colorscheme solarized
-endif
-function! ToggleBackground()
-    if (g:solarized_style=="dark")
-    let g:solarized_style="light"
-    colorscheme solarized
-else
-    let g:solarized_style="dark"
-    colorscheme solarized
-endif
-endfunction
-command! Togbg call ToggleBackground()
-
+call togglebg#map("<F5>")
 " EasyMotion {{{2
 let g:EasyMotion_leader_key = ',,'
 
