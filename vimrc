@@ -259,7 +259,7 @@ endfunction
 " http://stackoverflow.com/questions/4792561/how-to-do-search-replace-with-ack-in-vim
 " Show syntax highlighting groups for word under cursor {{{2
 " Tip: http://stackoverflow.com/questions/1467438/find-out-to-which-highlight-group-a-particular-keyword-symbol-belongs-in-vim
-nmap <C-S-P> :call <SID>SynStack()<CR>
+nmap <Leader>m :call <SID>SynStack()<CR>
 function! <SID>SynStack()
     if !exists("*synstack")
         return
