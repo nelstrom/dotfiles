@@ -291,6 +291,24 @@ function! CloseHiddenBuffers()
   echon "Deleted " . l:tally . " buffers"
 endfun
 
+command! -nargs=* Gprune call CloseFugitiveBuffers()
+function! CloseFugitiveBuffers()
+  let visible = {}
+  for t in range(1, tabpagenr('$'))
+    for b in tabpagebuflist(t)
+      let visible[b] = 1
+    endfor
+  endfor
+  let l:tally = 0
+  for b in range(1, bufnr('$'))
+    if bufloaded(b) && !has_key(visible, b)
+      let l:tally += 1
+      exe 'bw ' . b
+    endif
+  endfor
+  echon "Deleted " . l:tally . " buffers"
+endfunction
+
 " Set tabstop, softtabstop and shiftwidth to the same value {{{2
 " From http://vimcasts.org/episodes/tabs-and-spaces/
 command! -nargs=* Stab call Stab()
