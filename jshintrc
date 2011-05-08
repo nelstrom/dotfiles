@@ -1,0 +1,43 @@
+{
+    "predef": [
+        "jasmine",
+        "spyOn",
+        "it",
+        "describe",
+        "expect"
+    ],
+
+    "node"     : true,
+    "es5"      : true,
+    "browser"  : true,
+    "jquery"   : true,
+
+    "maxerr"   : 100,
+    "passfail" : false,
+
+    "asi"      : false,
+    "bitwise"  : true,
+    "boss"     : false,
+    "curly"    : true,
+    "debug"    : true,
+    "devel"    : false,
+    "eqeqeq"   : true,
+    "eqnull"   : false,
+    "evil"     : false,
+    "forin"    : false,
+    "immed"    : true,
+    "laxbreak" : false,
+    "newcap"   : true,
+    "noarg"    : true,
+    "noempty"  : false,
+    "nonew"    : true,
+    "nomen"    : false,
+    "onevar"   : true,
+    "plusplus" : false,
+    "regexp"   : true,
+    "undef"    : true,
+    "sub"      : false,
+    "strict"   : false,
+    "white"    : true
+}
+
