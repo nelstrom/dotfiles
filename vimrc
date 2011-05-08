@@ -6,6 +6,7 @@
 " zk    move up to end of previous fold
 " Manage plugins. {{{1
 runtime macros/matchit.vim
+runtime ftplugin/man.vim
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 let g:GetLatestVimScripts_allowautoinstall=1
