@@ -2,14 +2,18 @@
 " equivalent:
 "   
 "     :source ~/.vim/spell/americanize.vim
+"
+" Or if you know the file is somewhere in your runtime path, you could
+" instead run:
+     :runtime spell/americanize.vim
 " 
 " The `:Abolish` command is provided by Tim Pope's abolish plugin (if
 " you don't install this, americanize.vim won't do anything!):
 "
 "     http://github.com/tpope/vim-abolish
 " 
-" This is allows lowercase and titlecased abbreviations to be created in a
-" single line:
+" This is allows lowercase and titlecased abbreviations to be created in
+" a single line:
 "
 "     :Abolish colour color
 " 
@@ -31,7 +35,7 @@ endif
 " -our to -or
 "  e.g. colour -> color
 "  suffixes: color, colors, colored, colorless, colorist, honorable
-Abolish -buffer {col,behavi,fav,flav,hon,neighb,rum,lab}our{,s,ed,less,able} {}or{}
+Abolish -buffer {col,behavi,fav,flav,hon,neighb,rum,lab}our{,s,ed,less,able,ing} {}or{}
 
 " -re to -er
 "  e.g. litre -> liter
@@ -43,7 +47,7 @@ Abolish -buffer {cent,goit,kilomet,lit,lust,mit,nit,reconnoit,saltpet,spect,thea
 Abolish -buffer {defen,offen,preten}ce {}se
 
 " Doubled consonants before a suffix
-Abolish -buffer {cance,counse,crue,mode,quarre,signa,trave}l{led,lor,ler,lest,ling,} {}l{ed,or,er,est,ing}
+Abolish -buffer {cance,counse,crue,mode,quarre,signa,trave}{lled,llor,ller,llest,lling,} {}{led,lor,ler,lest,ling}
 Abolish -buffer jewellery jewelry
 Abolish -buffer fulfil fulfill
 
