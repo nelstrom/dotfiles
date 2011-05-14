@@ -1,4 +1,4 @@
-" Folding cheet sheet 
+" Folding cheet sheet
 " zR    open all folds
 " zM    close all folds
 " za    toggle fold at cursor position
@@ -321,7 +321,7 @@ function! Stab()
   endif
   call SummarizeTabs()
 endfunction
- 
+
 function! SummarizeTabs()
   try
     echohl ModeMsg
@@ -401,6 +401,21 @@ set ww+=<,>
 vmap <C-Left> x<Left>P`[v`]
 vmap <C-Right> x<Right>P`[v`]
 " Configure plugins {{{1
+" Fugitive.vim {{{2
+if has("autocmd")
+
+  " Auto-close fugitive buffers
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+
+  " Navigate up one level from fugitive trees and blobs
+  autocmd User fugitive
+    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+    \   nnoremap <buffer> .. :edit %:h<CR> |
+    \ endif
+
+endif
+" Add git branch to statusline.
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " Gundo.vim {{{2
 map <Leader>u :GundoToggle<CR>
 
