@@ -132,6 +132,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead Rakefile,Capfile,Gemfile,Termfile,config.ru setfiletype ruby
   autocmd FileType ruby :Abolish -buffer initialise initialize
   autocmd FileType vo_base :colorscheme solarized
+  autocmd BufNewFile,BufRead ~/dotfiles/vim/macros/*,~/.vim/macros/* setfiletype viminfo
 endif
 
 " Toggles & Switches (Leader commands) {{{1
