@@ -192,6 +192,8 @@ map <leader>et :tabe %%
 map <leader>er :e <C-R>=expand("%:r")."."<CR>
 " Shortcuts for visual selections {{{2
 nmap gV `[v`]
+" http://stackoverflow.com/questions/6228079/remove-newlines-from-a-register-in-vim/6235707#6235707
+nnoremap <expr> gV    "`[".getregtype(v:register)[0]."`]"
 " Substitute command repetition {{{2
 nnoremap & :~&<Enter>
 vnoremap & :~&<Enter>
