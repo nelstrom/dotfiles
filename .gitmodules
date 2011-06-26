@@ -1,136 +1,180 @@
 [submodule "vim/bundle/vim-rails"]
 	path = vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
+	ignore = dirty
 [submodule "vim/bundle/vim-blackboard"]
 	path = vim/bundle/vim-blackboard
 	url = git://github.com/nelstrom/vim-blackboard.git
+	ignore = dirty
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+	ignore = dirty
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
+	ignore = dirty
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
+	ignore = dirty
 [submodule "vim/bundle/vim-vividchalk"]
 	path = vim/bundle/vim-vividchalk
 	url = git://github.com/tpope/vim-vividchalk.git
+	ignore = dirty
 [submodule "vim/bundle/vim-haml"]
 	path = vim/bundle/vim-haml
 	url = git://github.com/tpope/vim-haml.git
+	ignore = dirty
 [submodule "vim/bundle/vim-endwise"]
 	path = vim/bundle/vim-endwise
 	url = git://github.com/tpope/vim-endwise.git
+	ignore = dirty
 [submodule "vim/bundle/vim-unimpaired"]
 	path = vim/bundle/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
+	ignore = dirty
 [submodule "vim/bundle/vim-abolish"]
 	path = vim/bundle/vim-abolish
 	url = git://github.com/tpope/vim-abolish.git
+	ignore = dirty
 [submodule "vim/bundle/vim-ragtag"]
 	path = vim/bundle/vim-ragtag
 	url = git://github.com/tpope/vim-ragtag.git
+	ignore = dirty
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
 	url = git://github.com/tpope/vim-markdown.git
+	ignore = dirty
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+	ignore = dirty
 [submodule "vim/bundle/vim-speeddating"]
 	path = vim/bundle/vim-speeddating
 	url = git://github.com/tpope/vim-speeddating.git
+	ignore = dirty
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
+	ignore = dirty
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
+	ignore = dirty
 [submodule "vim/bundle/vim-javascript"]
 	path = vim/bundle/vim-javascript
 	url = http://github.com/pangloss/vim-javascript.git
+	ignore = dirty
 [submodule "vim/bundle/gist"]
 	path = vim/bundle/gist
 	url = http://github.com/mattn/gist-vim.git
+	ignore = dirty
 [submodule "vim/bundle/vim-markdown-preview"]
 	path = vim/bundle/vim-markdown-preview
 	url = git@github.com:nelstrom/vim-markdown-preview.git
+	ignore = dirty
 [submodule "vim/bundle/mac-classic"]
 	path = vim/bundle/mac-classic
 	url = git@github.com:nelstrom/vim-mac-classic-theme.git
+	ignore = dirty
 [submodule "vim/bundle/vim-rake"]
 	path = vim/bundle/vim-rake
 	url = http://github.com/tpope/vim-rake.git
+	ignore = dirty
 [submodule "vim/bundle/visincr"]
 	path = vim/bundle/visincr
 	url = http://github.com/vim-scripts/VisIncr.git
+	ignore = dirty
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+	ignore = dirty
 [submodule "vim/bundle/cucumber"]
 	path = vim/bundle/cucumber
 	url = https://github.com/tpope/vim-cucumber.git
+	ignore = dirty
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
+	ignore = dirty
 [submodule "vim/bundle/textobj-user"]
 	path = vim/bundle/textobj-user
 	url = https://github.com/kana/vim-textobj-user.git
+	ignore = dirty
 [submodule "vim/bundle/textobj-entire"]
 	path = vim/bundle/textobj-entire
 	url = https://github.com/kana/vim-textobj-entire.git
+	ignore = dirty
 [submodule "vim/bundle/textobj-lastpat"]
 	path = vim/bundle/textobj-lastpat
 	url = https://github.com/kana/vim-textobj-lastpat.git
+	ignore = dirty
 [submodule "vim/bundle/textobj-indent"]
 	path = vim/bundle/textobj-indent
 	url = https://github.com/kana/vim-textobj-indent.git
+	ignore = dirty
 [submodule "vim/bundle/textobj-rubyblock"]
 	path = vim/bundle/textobj-rubyblock
 	url = git@github.com:nelstrom/vim-textobj-rubyblock.git
+	ignore = dirty
 [submodule "vim/bundle/vimwiki"]
 	path = vim/bundle/vimwiki
 	url = https://github.com/vim-scripts/vimwiki.git
+	ignore = dirty
 [submodule "vim/bundle/taglist"]
 	path = vim/bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
+	ignore = dirty
 [submodule "vim/bundle/project"]
 	path = vim/bundle/project
 	url = https://github.com/vim-scripts/project.tar.gz.git
+	ignore = dirty
 [submodule "vim/bundle/pml"]
 	path = vim/bundle/pml
 	url = git@github.com:nelstrom/vim-pml.git
+	ignore = dirty
 [submodule "vim/bundle/indent-guides"]
 	path = vim/bundle/indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
+	ignore = dirty
 [submodule "vim/bundle/gundo"]
 	path = vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
+	ignore = dirty
 [submodule "vim/bundle/voom"]
 	path = vim/bundle/voom
 	url = https://github.com/vim-scripts/VOoM.git
+	ignore = dirty
 [submodule "vim/bundle/coffeescript"]
 	path = vim/bundle/coffeescript
 	url = https://github.com/kchmck/vim-coffee-script.git
+	ignore = dirty
 [submodule "vim/bundle/ReplaceWithRegister"]
 	path = vim/bundle/ReplaceWithRegister
 	url = https://github.com/vim-scripts/ReplaceWithRegister.git
+	ignore = dirty
 [submodule "vim/bundle/textobj-syntax"]
 	path = vim/bundle/textobj-syntax
 	url = https://github.com/kana/vim-textobj-syntax.git
+	ignore = dirty
 [submodule "vim/bundle/visual-star-search"]
 	path = vim/bundle/visual-star-search
 	url = git@github.com:nelstrom/vim-visual-star-search.git
+	ignore = dirty
 [submodule "vim/bundle/space"]
 	path = vim/bundle/space
 	url = git://github.com/kongo2002/vim-space.git
+	ignore = dirty
 [submodule "vim/bundle/easymotion"]
 	path = vim/bundle/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
-    ignore = dirty
+	ignore = dirty
 [submodule "vim/bundle/solarized"]
 	path = vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+	ignore = dirty
 [submodule "vim/bundle/textobj-diff"]
 	path = vim/bundle/textobj-diff
 	url = https://github.com/kana/vim-textobj-diff.git
+	ignore = dirty
