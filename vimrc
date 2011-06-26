@@ -445,6 +445,14 @@ let g:EasyMotion_leader_key = ',,'
 
 " Vim wiki {{{2
 let g:vimwiki_menu=''
+" Syntastic {{{2
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
+" Syntastic adds `:Errors`, which conflicts with `:Explore`
+" This ensures that `:E` triggers netrw:
+command! -nargs=* E Explore
 " NERDcommenter {{{2
 let g:NERDMenuMode=0
 "  Modelines: {{{1
