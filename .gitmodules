@@ -70,10 +70,6 @@
 	path = vim/bundle/gist
 	url = http://github.com/mattn/gist-vim.git
 	ignore = dirty
-[submodule "vim/bundle/vim-markdown-preview"]
-	path = vim/bundle/vim-markdown-preview
-	url = git@github.com:nelstrom/vim-markdown-preview.git
-	ignore = dirty
 [submodule "vim/bundle/mac-classic"]
 	path = vim/bundle/mac-classic
 	url = git@github.com:nelstrom/vim-mac-classic-theme.git
