@@ -209,12 +209,9 @@ endif
 nnoremap viT vitVkoj
 nnoremap vaT vatV
 " Insert mode mappings {{{1
-" emacs style jump to end of line
-imap <C-e> <C-o>A
-imap <C-a> <C-o>I
-" Open line above (ctrl-shift-o much easier than ctrl-o shift-O)
-imap <C-Enter> <C-o>o
-imap <C-S-Enter> <C-o>O
+" http://stackoverflow.com/questions/6926034/creating-a-mapping-for-insert-mode-but-not-for-autocomplete-submode/6926691#6926691
+inoremap <expr> <c-e> pumvisible() ? "\<c-e>" : "\<c-o>A"
+inoremap <C-a> <C-o>I
 " Easily modify vimrc {{{1
 nmap <leader>v :e $MYVIMRC<CR>
 " http://stackoverflow.com/questions/2400264/is-it-possible-to-apply-vim-configurations-without-restarting/2400289#2400289
