@@ -384,8 +384,8 @@ vmap <D-]> >gv
 
 " Commenting {{{2
 " requires NERDCommenter plugin
-vmap <D-/> ,c<space>gv
-map <D-/> ,c<space>
+vmap <D-/> \\gv
+map <D-/> \\\
 
 " Duplicate selection {{{2
 "vmap <S-C-D> :copy'> <CR>V`[o
