@@ -173,3 +173,6 @@
 [submodule "vim/bundle/pml"]
 	path = vim/bundle/pml
 	url = git@github.com:nelstrom/vim-pml.git
+[submodule "vim/bundle/commentary"]
+	path = vim/bundle/commentary
+	url = https://github.com/tpope/vim-commentary.git
