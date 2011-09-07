@@ -14,10 +14,6 @@
 	path = vim/bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
 	ignore = dirty
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
-	ignore = dirty
 [submodule "vim/bundle/vim-vividchalk"]
 	path = vim/bundle/vim-vividchalk
 	url = git://github.com/tpope/vim-vividchalk.git
@@ -173,6 +169,8 @@
 [submodule "vim/bundle/pml"]
 	path = vim/bundle/pml
 	url = git@github.com:nelstrom/vim-pml.git
+	ignore = dirty
 [submodule "vim/bundle/commentary"]
 	path = vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
+	ignore = dirty
