@@ -195,6 +195,21 @@ map <leader>er :e <C-R>=expand("%:r")."."<CR>
 nmap gV `[v`]
 " http://stackoverflow.com/questions/6228079/remove-newlines-from-a-register-in-vim/6235707#6235707
 nnoremap <expr> gV    "`[".getregtype(v:register)[0]."`]"
+" <c-x>{char} - paste register into search field {{{2
+" escaping sensitive chars
+" http://stackoverflow.com/questions/7400743/
+cnoremap <c-x> <c-r>=<SID>PasteEscaped()<cr>
+function! s:PasteEscaped()
+  echo "\\".getcmdline()."\""
+  let char = getchar()
+  if char == "\<esc>"
+    return ''
+  else
+    let register_content = getreg(nr2char(char))
+    let escaped_register = escape(register_content, '\'.getcmdtype())
+    return substitute(escaped_register, '\n', '\\n', 'g')
+  endif
+endfunction
 " Substitute command repetition {{{2
 nnoremap & :~&<Enter>
 vnoremap & :~&<Enter>
