@@ -122,9 +122,6 @@
 	path = vim/bundle/project
 	url = https://github.com/vim-scripts/project.tar.gz.git
 	ignore = dirty
-[submodule "vim/bundle/indent-guides"]
-	path = vim/bundle/indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
 	ignore = dirty
 [submodule "vim/bundle/gundo"]
 	path = vim/bundle/gundo
