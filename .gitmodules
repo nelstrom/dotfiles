@@ -167,3 +167,6 @@
 	path = vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
 	ignore = dirty
+[submodule "vim/bundle/qargs"]
+	path = vim/bundle/qargs
+	url = git@github.com:nelstrom/vim-qargs.git
