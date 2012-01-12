@@ -209,8 +209,8 @@ function! s:PasteEscaped()
   endif
 endfunction
 " Substitute command repetition {{{2
-nnoremap & :~&<Enter>
-vnoremap & :~&<Enter>
+nnoremap & :&&<Enter>
+xnoremap & :&&<Enter>
 " Alignment commands {{{1
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
