@@ -33,11 +33,6 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -124,6 +119,9 @@ set nrformats=
 " Put swap files in /tmp file
 set backupdir=~/tmp
 set directory=~/tmp
+" Disable swapfile and backup
+set nobackup
+set noswapfile
 if has("autocmd")
   autocmd FileType html,css,scss,ruby,pml,yaml,coffee,vim setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
