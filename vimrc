@@ -237,17 +237,6 @@ endif
 
 " Custom commands and functions {{{1
 " Create a :Quickfixdo command, to match :argdo/bufdo/windo {{{2
-" Define a command to make it easier to use
-command! -nargs=0 -bar Qargs execute 'args ' . QuickfixFilenames()
-function! QuickfixFilenames()
-  " Building a hash ensures we get each buffer only once
-  let buffer_numbers = {}
-  for quickfix_item in getqflist()
-    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
-  endfor
-  return join(values(buffer_numbers))
-endfunction
-
 command! -nargs=+ QFDo call QFDo(<q-args>)
 " Function that does the work
 function! QFDo(command)
