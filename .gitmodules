@@ -170,3 +170,6 @@
 [submodule "vim/bundle/qargs"]
 	path = vim/bundle/qargs
 	url = git@github.com:nelstrom/vim-qargs.git
+[submodule "vim/bundle/nodelint"]
+	path = vim/bundle/nodelint
+	url = https://github.com/bigfish/vim-nodelint.git
