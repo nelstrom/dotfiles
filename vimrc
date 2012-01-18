@@ -9,6 +9,9 @@ runtime macros/matchit.vim
 runtime ftplugin/man.vim
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+" pathogen dynamically sets the runtimepath, like this:
+" set runtimepath+=~/.vim/bundle/vim-abolish/
+
 let g:GetLatestVimScripts_allowautoinstall=1
 " An example for a vimrc file. {{{1
 "

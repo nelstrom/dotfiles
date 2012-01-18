@@ -70,10 +70,6 @@
 	path = vim/bundle/mac-classic
 	url = git@github.com:nelstrom/vim-mac-classic-theme.git
 	ignore = dirty
-[submodule "vim/bundle/vim-rake"]
-	path = vim/bundle/vim-rake
-	url = http://github.com/tpope/vim-rake.git
-	ignore = dirty
 [submodule "vim/bundle/visincr"]
 	path = vim/bundle/visincr
 	url = http://github.com/vim-scripts/VisIncr.git
