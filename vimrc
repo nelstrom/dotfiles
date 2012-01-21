@@ -109,24 +109,6 @@ let Tlist_Show_One_File=1
 nmap <Leader>/ :TlistToggle<CR>
 
 " Mappings {{{1
-" Speed up buffer switching {{{2
-map <C-k> <C-W>k
-map <C-j> <C-W>j
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-" Speed up tab switching {{{2
-map <D-S-]> gt
-map <D-S-[> gT
-map <D-1> 1gt
-map <D-2> 2gt
-map <D-3> 3gt
-map <D-4> 4gt
-map <D-5> 5gt
-map <D-6> 6gt
-map <D-7> 7gt
-map <D-8> 8gt
-map <D-9> 9gt
-map <D-0> :tablast<CR>
 " Shortcuts to make it easier to explore wrapped lines {{{2
 " These come in handy when the following settings are enabled:
 "     :set linebreak wrap nolist
@@ -140,6 +122,7 @@ nmap <D-k> gk
 nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
+
 " Shortcuts for opening file in same directory as current file {{{2
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>ew :e %%
