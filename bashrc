@@ -37,6 +37,9 @@ alias g='git'
 # Vim aliases
 alias rvim='mvim --remote-silent '
 
+# Set terminal colors when launching screen
+alias tmux="TERM=screen-256color-bce tmux"
+
 # Functions
 # Fuzzy cd
 # Usage:
