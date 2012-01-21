@@ -174,9 +174,6 @@ endfunction
 " Substitute command repetition {{{2
 nnoremap & :&&<Enter>
 xnoremap & :&&<Enter>
-" TextObject tweaks {{{1
-nnoremap viT vitVkoj
-nnoremap vaT vatV
 " Easily modify vimrc {{{1
 nmap <leader>v :e $MYVIMRC<CR>
 " http://stackoverflow.com/questions/2400264/is-it-possible-to-apply-vim-configurations-without-restarting/2400289#2400289
@@ -374,15 +371,6 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " Gundo.vim {{{2
 map <Leader>u :GundoToggle<CR>
 
-" TextObject customizations {{{2
-" Entire text object {{{3
-" Map text-object for entire buffer to `ia` and `aa`.
-let g:textobj_entire_no_default_key_mappings = 1
-xmap aa  <Plug>(textobj-entire-a)
-omap aa  <Plug>(textobj-entire-a)
-xmap ia  <Plug>(textobj-entire-i)
-omap ia  <Plug>(textobj-entire-i)
-" }}}
 " Space.vim {{{2
 let g:space_disable_select_mode=1
 let g:space_no_search = 1
@@ -392,13 +380,8 @@ let g:solarized_menu=0
 set background=light
 colorscheme solarized
 call togglebg#map("<F5>")
-" EasyMotion {{{2
-let g:EasyMotion_leader_key = ',,'
-
 " Vim wiki {{{2
 let g:vimwiki_menu=''
-" NERDcommenter {{{2
-let g:NERDMenuMode=0
 "  Modelines: {{{1
 " vim: nowrap fdm=marker
 " }}}
