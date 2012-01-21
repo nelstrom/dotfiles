@@ -24,15 +24,13 @@ be sure, run:
 
     mkdir ~/tmp
 
-VIM
-===
+# VIM #
 
 My preferences for Vim are stored in `dotfiles/vimrc` and `dotfiles/gvimrc`
 respectively. All plugins and scripts are stored in the `dotfiles/vim`
 directory.
 
-Adding Plugin Bundles
----------------------
+## Adding Plugin Bundles ##
 
 Plugins that are published on github can be installed as submodules. For
 example, to install the [JavaScript bundle][jsbun], follow these steps:
@@ -66,8 +64,7 @@ it work:
 
 That did the trick.
 
-RUBY
-====
+# RUBY #
 
 My preferences for IRB customisations are stored in `dotfiles/irbrc`. To get
 the most from these, you should install the [interactive_editor][i_editor] and
