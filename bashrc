@@ -4,9 +4,6 @@ source ~/.profile
 # Bash customisations to be syncronised between machines.
 export PS1='\[\e[1;34m\][\u@\h \W]\$\[\e[0m\] '
 
-# Enable vi mode
-set -o vi
-
 # History
 export HISTCONTROL=erasedups	# when adding an item to history, delete itentical commands upstream
 export HISTSIZE=10000		# save 10000 items in history
