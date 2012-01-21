@@ -173,29 +173,3 @@ command! -range=% -nargs=1 Refactor :<line1>,<line2>call Refactor(<args>)
 "   http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
 " Always show the status line (even if no split windows)
 set laststatus=2
-" Mappings for a recovering TextMate user {{{1
-" Indentation {{{2
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
-
-" Commenting {{{2
-" requires NERDCommenter plugin
-vmap <D-/> \\gv
-map <D-/> \\\
-
-" Duplicate selection {{{2
-"vmap <S-C-D> :copy'> <CR>V`[o
-"nmap <S-C-D> :copy .<CR>
-" Move selection {{{2
-  " Move current line down/up
-  map <C-Down> ]e
-  map <C-Up> [e
-  " Move visually selected lines down/up
-  vmap <C-Down> ]egv
-  vmap <C-Up> [egv
-" Move visual selection back/forwards
-set ww+=<,>
-vmap <C-Left> x<Left>P`[v`]
-vmap <C-Right> x<Right>P`[v`]
