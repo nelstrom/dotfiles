@@ -125,17 +125,6 @@ nnoremap <expr> gV    "`[".getregtype(v:register)[0]."`]"
 " Substitute command repetition {{{2
 nnoremap & :&&<Enter>
 xnoremap & :&&<Enter>
-" Custom commands and functions {{{1
-" Show syntax highlighting groups for word under cursor {{{2
-" Tip: http://stackoverflow.com/questions/1467438/find-out-to-which-highlight-group-a-particular-keyword-symbol-belongs-in-vim
-nmap <Leader>m :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-    if !exists("*synstack")
-        return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
-
 
 " Status line {{{1
 " Good article on setting a statusline:
