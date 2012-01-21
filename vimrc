@@ -137,37 +137,6 @@ function! <SID>SynStack()
 endfunc
 
 
-" Strip trailing whitespaces  {{{2
-function! Preserve(command)
-  " Preparation: save last search, and cursor position.
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
-  " Do the business:
-  execute a:command
-  " Clean up: restore previous search history, and cursor position
-  let @/=_s
-  call cursor(l, c)
-endfunction
-nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
-nmap _= :call Preserve("normal gg=G")<CR>
-" Swap words in a single substitution command {{{2
-" http://stackoverflow.com/questions/765894/can-i-substitute-multiple-items-in-a-single-regular-expression-in-vim-or-perl/766093#766093
-function! Refactor(dict) range
-  execute a:firstline . ',' . a:lastline .  's/\C\<\%(' . join(keys(a:dict),'\|'). '\)\>/\='.string(a:dict).'[submatch(0)]/ge'
-endfunction
-command! -range=% -nargs=1 Refactor :<line1>,<line2>call Refactor(<args>)
-
-" Running :Refactor {'quick':'slow', 'lazy':'energetic'}  will change the following text:
-"    The quick brown fox ran quickly next to the lazy brook.
-"into:
-"    The slow brown fox ran slowly next to the energetic brook.
-
-" TODO: create a :Swap command, which turns:
-"    :Swap(portrait,landscape)
-" into
-"    :Refactor {'portrait':'landscape', 'landscape':'portrait'}
-
 " Status line {{{1
 " Good article on setting a statusline:
 "   http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
