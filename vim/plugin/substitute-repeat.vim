@@ -1,0 +1,2 @@
+nnoremap & :&&<Enter>
+xnoremap & :&&<Enter>

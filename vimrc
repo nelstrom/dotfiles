@@ -1,9 +1,3 @@
-" Folding cheet sheet
-" zR    open all folds
-" zM    close all folds
-" za    toggle fold at cursor position
-" zj    move down to start of next fold
-" zk    move up to end of previous fold
 " vim: nowrap fdm=marker
 
 " Manage plugins. {{{1
@@ -40,7 +34,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 
-" Preferences {{{1
+
 set visualbell t_vb=
 set number
 set cursorline
@@ -49,7 +43,7 @@ set nojoinspaces
 set listchars=tab:▸\ ,eol:¬
 set wildmode=longest,list
 set nrformats=
-"set spelllang=en_gb
+set laststatus=2
 
 " Indentation preferences
 set tabstop=2
@@ -61,22 +55,9 @@ set expandtab
 set nobackup
 set noswapfile
 
-" Toggles & Switches (Leader commands) {{{1
 let mapleader = ","
 
-" Mappings {{{1
-
-" Shortcuts for visual selections {{{2
 nmap gV `[v`]
 " http://stackoverflow.com/questions/6228079/remove-newlines-from-a-register-in-vim/6235707#6235707
 nnoremap <expr> gV    "`[".getregtype(v:register)[0]."`]"
 
-" Substitute command repetition {{{2
-nnoremap & :&&<Enter>
-xnoremap & :&&<Enter>
-
-" Status line {{{1
-" Good article on setting a statusline:
-"   http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
-" Always show the status line (even if no split windows)
-set laststatus=2
