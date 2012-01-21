@@ -28,7 +28,6 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
-" In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
 endif
@@ -95,12 +94,6 @@ set noswapfile
 
 " Toggles & Switches (Leader commands) {{{1
 let mapleader = ","
-nmap <silent> <leader>l :set list!<CR>
-nmap <silent> <leader>w :set wrap!<CR>
-nmap <silent> <buffer> <leader>s :set spell!<CR>
-nmap <silent> <leader>n :silent :nohlsearch<CR>
-command! -nargs=* Wrap set wrap linebreak nolist
-command! -nargs=* Maxsize set columns=1000 lines=1000
 
 " Mappings {{{1
 
