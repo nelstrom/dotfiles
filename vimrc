@@ -104,7 +104,6 @@ nmap <silent> <leader>l :set list!<CR>
 nmap <silent> <leader>w :set wrap!<CR>
 nmap <silent> <buffer> <leader>s :set spell!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
-nmap <silent> <leader>c :IndentGuidesToggle<CR>
 command! -nargs=* Wrap set wrap linebreak nolist
 command! -nargs=* Maxsize set columns=1000 lines=1000
 " CTags {{{1
@@ -175,20 +174,9 @@ endfunction
 " Substitute command repetition {{{2
 nnoremap & :&&<Enter>
 xnoremap & :&&<Enter>
-" Alignment commands {{{1
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
 " TextObject tweaks {{{1
 nnoremap viT vitVkoj
 nnoremap vaT vatV
-" Insert mode mappings {{{1
-" http://stackoverflow.com/questions/6926034/creating-a-mapping-for-insert-mode-but-not-for-autocomplete-submode/6926691#6926691
-inoremap <expr> <c-e> pumvisible() ? "\<c-e>" : "\<c-o>A"
-inoremap <C-a> <C-o>I
 " Easily modify vimrc {{{1
 nmap <leader>v :e $MYVIMRC<CR>
 " http://stackoverflow.com/questions/2400264/is-it-possible-to-apply-vim-configurations-without-restarting/2400289#2400289
