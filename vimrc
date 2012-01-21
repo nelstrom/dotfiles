@@ -1,17 +1,16 @@
 " vim: nowrap fdm=marker
 set nocompatible
-
-" Activate plugins that ship with Vim
+let mapleader = ","
+" Load plugins that ship with Vim {{{1
 runtime macros/matchit.vim
 runtime ftplugin/man.vim
 
-" Manage plugins
+" Load bundled plugins {{{1
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" Behaviour {{{1
 set backspace=indent,eol,start
-
-" Behaviour
 set history=50
 set incsearch
 set visualbell t_vb=
@@ -23,8 +22,7 @@ if has('mouse')
   set mouse=a
 endif
 
-
-" Appearance
+" Appearance {{{1
 set ruler
 set showcmd
 set laststatus=2
@@ -37,14 +35,13 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
-" Indentation
+" Indentation {{{1
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 
-" Disable swapfile and backup
+" Disable swapfile and backup {{{1
 set nobackup
 set noswapfile
-
-let mapleader = ","
+" }}}
