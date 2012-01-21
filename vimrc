@@ -1,40 +1,30 @@
 " vim: nowrap fdm=marker
-
-" Manage plugins. {{{1
-runtime macros/matchit.vim
-runtime ftplugin/man.vim
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-" pathogen dynamically sets the runtimepath, like this:
-" set runtimepath+=~/.vim/bundle/vim-abolish/
-
-" An example for a vimrc file. {{{1
-"
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+" Activate plugins that ship with Vim
+runtime macros/matchit.vim
+runtime ftplugin/man.vim
 
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+" Manage plugins
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+set backspace=indent,eol,start
 
 if has('mouse')
   set mouse=a
 endif
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
+" When the terminal has colors, enable syntax+search highlighting
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
 endif
 
-
-
+set history=50
+set ruler
+set showcmd
+set incsearch
 set visualbell t_vb=
 set number
 set cursorline
@@ -56,8 +46,3 @@ set nobackup
 set noswapfile
 
 let mapleader = ","
-
-nmap gV `[v`]
-" http://stackoverflow.com/questions/6228079/remove-newlines-from-a-register-in-vim/6235707#6235707
-nnoremap <expr> gV    "`[".getregtype(v:register)[0]."`]"
-
