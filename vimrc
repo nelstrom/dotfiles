@@ -76,29 +76,22 @@ endif
 set visualbell t_vb=
 set number
 set cursorline
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
 set hidden
 set nojoinspaces
 set listchars=tab:▸\ ,eol:¬
 set wildmode=longest,list
 set nrformats=
 "set spelllang=en_gb
+
+" Indentation preferences
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
 " Disable swapfile and backup
 set nobackup
 set noswapfile
-if has("autocmd")
-  autocmd FileType html,css,scss,ruby,pml,yaml,coffee,vim setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
-  autocmd BufNewFile,BufRead ~/projects/sencha/**/*.js setlocal ts=4 sts=4 sw=4 et
-  autocmd BufNewFile,BufRead *.rss setfiletype xml
-  autocmd BufNewFile,BufRead Rakefile,Capfile,Gemfile,Termfile,Vagrantfile,config.ru setfiletype ruby
-  autocmd FileType ruby :Abolish -buffer initialise initialize
-  autocmd FileType vo_base :colorscheme solarized
-  autocmd BufNewFile,BufRead ~/dotfiles/vim/macros/*,~/.vim/macros/* setfiletype viminfo
-endif
 
 " Toggles & Switches (Leader commands) {{{1
 let mapleader = ","
