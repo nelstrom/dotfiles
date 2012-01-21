@@ -110,13 +110,6 @@ nmap <Leader>/ :TlistToggle<CR>
 
 " Mappings {{{1
 
-" Shortcuts for opening file in same directory as current file {{{2
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>ew :e %%
-map <leader>es :sp %%
-map <leader>ev :vsp %%
-map <leader>et :tabe %%
-map <leader>er :e <C-R>=expand("%:r")."."<CR>
 " Shortcuts for visual selections {{{2
 nmap gV `[v`]
 " http://stackoverflow.com/questions/6228079/remove-newlines-from-a-register-in-vim/6235707#6235707
