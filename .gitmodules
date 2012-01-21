@@ -144,3 +144,6 @@
 	path = vim/bundle/eunich
 	url = https://github.com/tpope/vim-eunuch.git
 	ignore = dirty
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
