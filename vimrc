@@ -101,12 +101,6 @@ nmap <silent> <buffer> <leader>s :set spell!<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 command! -nargs=* Wrap set wrap linebreak nolist
 command! -nargs=* Maxsize set columns=1000 lines=1000
-" CTags {{{1
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
-let tlist_markdown_settings='markdown;h:Headings'
-let Tlist_Show_One_File=1
-nmap <Leader>/ :TlistToggle<CR>
 
 " Mappings {{{1
 
