@@ -32,3 +32,6 @@ call togglebg#map("<F5>")
 let g:vimwiki_menu=''
 
 " vim: nowrap fdm=marker
+" Ctlr-P {{{1
+let g:ctrlp_jump_to_buffer = 0
+let g:ctrlp_working_path_mode = 0
