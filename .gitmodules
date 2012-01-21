@@ -46,10 +46,6 @@
 	path = vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 	ignore = dirty
-[submodule "vim/bundle/vim-speeddating"]
-	path = vim/bundle/vim-speeddating
-	url = git://github.com/tpope/vim-speeddating.git
-	ignore = dirty
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
@@ -62,17 +58,9 @@
 	path = vim/bundle/vim-javascript
 	url = http://github.com/pangloss/vim-javascript.git
 	ignore = dirty
-[submodule "vim/bundle/gist"]
-	path = vim/bundle/gist
-	url = http://github.com/mattn/gist-vim.git
-	ignore = dirty
 [submodule "vim/bundle/mac-classic"]
 	path = vim/bundle/mac-classic
 	url = git@github.com:nelstrom/vim-mac-classic-theme.git
-	ignore = dirty
-[submodule "vim/bundle/visincr"]
-	path = vim/bundle/visincr
-	url = http://github.com/vim-scripts/VisIncr.git
 	ignore = dirty
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
@@ -106,11 +94,6 @@
 	path = vim/bundle/vimwiki
 	url = https://github.com/vim-scripts/vimwiki.git
 	ignore = dirty
-[submodule "vim/bundle/project"]
-	path = vim/bundle/project
-	url = https://github.com/vim-scripts/project.tar.gz.git
-	ignore = dirty
-	ignore = dirty
 [submodule "vim/bundle/gundo"]
 	path = vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
@@ -118,10 +101,6 @@
 [submodule "vim/bundle/coffeescript"]
 	path = vim/bundle/coffeescript
 	url = https://github.com/kchmck/vim-coffee-script.git
-	ignore = dirty
-[submodule "vim/bundle/ReplaceWithRegister"]
-	path = vim/bundle/ReplaceWithRegister
-	url = https://github.com/vim-scripts/ReplaceWithRegister.git
 	ignore = dirty
 [submodule "vim/bundle/textobj-syntax"]
 	path = vim/bundle/textobj-syntax
@@ -142,10 +121,6 @@
 [submodule "vim/bundle/solarized"]
 	path = vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-	ignore = dirty
-[submodule "vim/bundle/textobj-diff"]
-	path = vim/bundle/textobj-diff
-	url = https://github.com/kana/vim-textobj-diff.git
 	ignore = dirty
 [submodule "vim/bundle/vspec"]
 	path = vim/bundle/vspec
