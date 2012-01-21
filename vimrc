@@ -4,6 +4,8 @@
 " za    toggle fold at cursor position
 " zj    move down to start of next fold
 " zk    move up to end of previous fold
+" vim: nowrap fdm=marker
+
 " Manage plugins. {{{1
 runtime macros/matchit.vim
 runtime ftplugin/man.vim
@@ -342,36 +344,3 @@ map <D-/> \\\
 set ww+=<,>
 vmap <C-Left> x<Left>P`[v`]
 vmap <C-Right> x<Right>P`[v`]
-" Configure plugins {{{1
-" Fugitive.vim {{{2
-if has("autocmd")
-
-  " Auto-close fugitive buffers
-  autocmd BufReadPost fugitive://* set bufhidden=delete
-
-  " Navigate up one level from fugitive trees and blobs
-  autocmd User fugitive
-    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-    \   nnoremap <buffer> .. :edit %:h<CR> |
-    \ endif
-
-endif
-" Add git branch to statusline.
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-" Gundo.vim {{{2
-map <Leader>u :GundoToggle<CR>
-
-" Space.vim {{{2
-let g:space_disable_select_mode=1
-let g:space_no_search = 1
-
-" Solarized {{{2
-let g:solarized_menu=0
-set background=light
-colorscheme solarized
-call togglebg#map("<F5>")
-" Vim wiki {{{2
-let g:vimwiki_menu=''
-"  Modelines: {{{1
-" vim: nowrap fdm=marker
-" }}}
