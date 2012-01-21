@@ -6,7 +6,7 @@ runtime macros/matchit.vim
 runtime ftplugin/man.vim
 
 " Load bundled plugins {{{1
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 " Behaviour {{{1
