@@ -1,3 +1,5 @@
+setlocal wrap linebreak nolist
+
 function! NestedMarkdownFolds()
   if match(getline(v:lnum), "^#\\{6}") >= 0
     return ">6"
