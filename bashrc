@@ -53,11 +53,8 @@ function cdf() {
 # Reload .bashrc
 alias refresh='. ~/.bashrc'
 
-export PATH=/Applications/SenchaSDKTools-1.2.3:$PATH
-
-export PATH=/Applications/SenchaSDKTools-1.2.3/command:$PATH
-
-export PATH=/Applications/SenchaSDKTools-1.2.3/jsbuilder:$PATH
-
-export PATH=/Applications/SenchaSDKTools-1.2.3/appbuilder:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH=/Developer/Applications/Sencha:$PATH
+export PATH=/Developer/Applications/Sencha/command:$PATH
+export PATH=/Developer/Applications/Sencha/jsbuilder:$PATH
