@@ -15,7 +15,9 @@ if has("autocmd")
 endif
 
 " Add git branch to statusline.
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+if exists("*fugitive#statusline")
+  set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+endif
 
 " Gundo.vim {{{1
 map <Leader>u :GundoToggle<CR>
