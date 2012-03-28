@@ -1,3 +1,5 @@
+" netrw.vim {{{1
+let g:netrw_banner=0
 " Fugitive.vim {{{1
 if has("autocmd")
 
@@ -25,8 +27,10 @@ let g:space_no_search = 1
 " Solarized {{{1
 let g:solarized_menu=0
 set background=light
-colorscheme solarized
-call togglebg#map("<F5>")
+silent! colorscheme solarized
+if exists('*togglebg#map')
+  call togglebg#map("<F5>")
+endif
 
 " Vim wiki {{{1
 let g:vimwiki_menu=''
