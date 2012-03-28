@@ -16,11 +16,16 @@ set incsearch
 set visualbell t_vb=
 set hidden
 set nojoinspaces
-set wildmode=longest,list
 set nrformats=
 if has('mouse')
   set mouse=a
 endif
+
+" Tab-completion in command-line mode
+set wildmode=full
+set wildmenu
+set wildignore=*.pdf,*.fo,*.xml
+set suffixes=.otl
 
 " Appearance {{{1
 set ruler
