@@ -39,7 +39,7 @@ endif
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set expandtab
+
 
 " Disable swapfile and backup {{{1
 set nobackup
