@@ -18,7 +18,8 @@ set hidden
 set nojoinspaces
 set nrformats=
 if has('mouse')
-  set mouse=a
+  " Don't want the mouse to work in insert mode.
+  set mouse=nv
 endif
 
 " Tab-completion in command-line mode
