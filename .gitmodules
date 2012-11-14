@@ -147,3 +147,18 @@
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/vim-ruby"]
+	path = vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/vim-rake"]
+	path = vim/bundle/vim-rake
+	url = https://github.com/tpope/vim-rake.git
+[submodule "vim/bundle/bundler"]
+	path = vim/bundle/bundler
+	url = https://github.com/tpope/vim-bundler.git
+[submodule "vim/bundle/vim-bundler"]
+	path = vim/bundle/vim-bundler
+	url = https://github.com/tpope/vim-bundler.git
+[submodule "vim/bundle/LogiPat"]
+	path = vim/bundle/LogiPat
+	url = git://github.com/vim-scripts/LogiPat.git
