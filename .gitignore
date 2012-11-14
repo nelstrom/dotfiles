@@ -1,3 +1,7 @@
 *.swp
 *~
 vim/.netrwhist
+vim/bundle/cutlass/
+vim/bundle/potion/
+vim/bundle/sencha/
+vim/bundle/vim-markdown-folding/
