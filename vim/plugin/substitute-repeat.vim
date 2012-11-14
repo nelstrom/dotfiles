@@ -1,2 +1,0 @@
-nnoremap & :&&<Enter>
-xnoremap & :&&<Enter>
