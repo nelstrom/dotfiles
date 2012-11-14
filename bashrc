@@ -58,3 +58,13 @@ alias refresh='. ~/.bashrc'
 export PATH=/Developer/Applications/Sencha:$PATH
 export PATH=/Developer/Applications/Sencha/command:$PATH
 export PATH=/Developer/Applications/Sencha/jsbuilder:$PATH
+
+export PATH=/Developer/Applications/SenchaSDKTools-2.0.0-beta3:$PATH
+
+export SENCHA_SDK_TOOLS_2_0_0_BETA3="/Applications/SenchaSDKTools-2.0.0-beta3"
+
+export PATH=/Applications/SenchaSDKTools-2.0.0-beta3:$PATH
+
+export PATH=/Users/drew/bin/Sencha/Cmd/3.0.0.188:$PATH
+
+export SENCHA_CMD_3_0_0="/Users/drew/bin/Sencha/Cmd/3.0.0.188"
