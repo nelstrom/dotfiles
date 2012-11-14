@@ -61,6 +61,12 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+" Enable persistent undo {{{2
+set undofile
+set undodir=~/tmp/vim/undo
+if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p")
+endif
 " Disable swapfile and backup {{{2
 set nobackup
 set noswapfile
