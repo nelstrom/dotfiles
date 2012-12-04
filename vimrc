@@ -132,6 +132,9 @@ function! s:PasteEscaped()
   endif
 endfunction
 " Custom commands {{{1
+function! Foo()
+  call system('sleep 2')
+endfunction
 " :Stab {{{2
 " Set tabstop, softtabstop and shiftwidth to the same value
 " From http://vimcasts.org/episodes/tabs-and-spaces/
@@ -230,10 +233,14 @@ if exists('*togglebg#map')
   call togglebg#map("<F5>")
 endif
 
+" Vim-ruby {{{2
+let ruby_fold=1
 " Vim wiki {{{2
 let g:vimwiki_menu=''
 
 " vim: nowrap fdm=marker
+" Markdown {{{2
+let g:markdown_fenced_languages = ['cpp', 'python']
 " Ctlr-P {{{2
 let g:ctrlp_jump_to_buffer = 0
 let g:ctrlp_working_path_mode = 0
