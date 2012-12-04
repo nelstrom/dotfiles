@@ -162,3 +162,6 @@
 [submodule "vim/bundle/vim-HiLinkTrace"]
 	path = vim/bundle/vim-HiLinkTrace
 	url = git://github.com/gerw/vim-HiLinkTrace.git
+[submodule "vim/bundle/vim-markdown-jekyll"]
+	path = vim/bundle/vim-markdown-jekyll
+	url = git://github.com/PProvost/vim-markdown-jekyll.git
