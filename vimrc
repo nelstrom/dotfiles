@@ -54,6 +54,7 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
 endif
+set foldlevelstart=99
 
 " Indentation {{{2
 set tabstop=2
