@@ -68,3 +68,5 @@ export PATH=/Applications/SenchaSDKTools-2.0.0-beta3:$PATH
 export PATH=/Users/drew/bin/Sencha/Cmd/3.0.0.188:$PATH
 
 export SENCHA_CMD_3_0_0="/Users/drew/bin/Sencha/Cmd/3.0.0.188"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
