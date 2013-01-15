@@ -5,7 +5,7 @@ set bg=dark
     "hi normal guibg=black
 "endif
 set guifont=LetterGothicMono:h18
-colorscheme solarized
+silent! colorscheme solarized
 
 if exists('*HexHighlight()')
   " http://www.vim.org/scripts/script.php?script_id=2937
