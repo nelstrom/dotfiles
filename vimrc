@@ -88,7 +88,7 @@ nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
 " File opening {{{2
 " Shortcuts for opening file in same directory as current file
-cnoremap <expr> %%  getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+cnoremap <expr> %%  getcmdtype() == ':' ? escape(expand('%:h'), ' \').'/' : '%%'
 
 map <leader>ew :e %%
 map <leader>es :sp %%
