@@ -165,3 +165,6 @@
 [submodule "vim/bundle/vim-markdown-jekyll"]
 	path = vim/bundle/vim-markdown-jekyll
 	url = git://github.com/PProvost/vim-markdown-jekyll.git
+[submodule "vim/bundle/scriptease"]
+	path = vim/bundle/scriptease
+	url = git://github.com/tpope/vim-scriptease.git
