@@ -25,6 +25,14 @@ Bundle 'tpope/vim-unimpaired.git'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'nelstrom/vim-docopen'
 
+Bundle 'kien/ctrlp.vim.git'
+Bundle 'pangloss/vim-javascript.git'
+Bundle 'godlygeek/tabular.git'
+Bundle 'kongo2002/vim-space.git'
+Bundle 'kana/vim-vspec.git'
+Bundle 'nelstrom/vim-qargs.git'
+Bundle 'vim-scripts/vimwiki.git'
+
 " Custom textobjects
 Bundle 'kana/vim-textobj-user.git'
 Bundle 'kana/vim-textobj-entire.git'
