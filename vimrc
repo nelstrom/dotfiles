@@ -1,30 +1,78 @@
-set nocompatible
-filetype off
+" vim: nowrap fdm=marker
+source ~/dotfiles/bundles.vim
 
-" Vundle setup
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-filetype plugin indent on
+" Personal preferences not set by sensible.vim
+set history=5000
+set showcmd
+" set listchars=tab:▸\ ,eol:¬
+set foldlevelstart=99
+set noswapfile
+if has('mouse')
+  set mouse=nv
+endif
 
-" General enhancements
-Bundle 'tpope/vim-abolish.git'
-Bundle 'tpope/vim-characterize.git'
-Bundle 'tpope/vim-commentary.git'
-Bundle 'tpope/vim-dispatch.git'
-Bundle 'tpope/vim-eunuch.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'tpope/vim-markdown.git'
-Bundle 'tpope/vim-ragtag.git'
-Bundle 'tpope/vim-repeat.git'
-Bundle 'tpope/vim-scriptease.git'
-Bundle 'tpope/vim-sensible.git'
-Bundle 'tpope/vim-surround.git'
-Bundle 'tpope/vim-tbone.git'
-Bundle 'tpope/vim-unimpaired.git'
+" Colorscheme
+set background=dark
+silent! colorscheme solarized
 
-" Ruby enhancements
-Bundle 'tpope/vim-bundler.git'
-Bundle 'tpope/vim-endwise.git'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-rake.git'
+" Plugin configuration {{{1
+" netrw.vim {{{2
+let g:netrw_banner=0
+" Vim-ruby {{{2
+let ruby_fold=1
+" Markdown {{{2
+let g:markdown_fenced_languages = ['ruby', 'javascript']
+" Solarized {{{2
+let g:solarized_menu=0
+if exists('*togglebg#map')
+  call togglebg#map("<F5>")
+endif
+" Ctlr-P {{{2
+let g:ctrlp_jump_to_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'find %s -type f'
+" Ragel {{{2
+let g:ragel_default_subtype='ruby'
+
+" Mappings {{{1
+" File opening {{{2
+cnoremap <expr> %%  getcmdtype() == ':' ? escape(expand('%:h'), ' \').'/' : '%%'
+
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
+" Prompt to open file with same name, different extension
+map <leader>er :e <C-R>=expand("%:r")."."<CR>
+
+" Fix the & command in normal+visual modes {{{2
+nnoremap & :&&<Enter>
+xnoremap & :&&<Enter>
+
+" Strip trailing whitespace {{{2
+function! Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
+nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+
+" Visual line repeat {{{2
+xnoremap . :normal .<CR>
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
+" Experimental mappings {{{2
+nnoremap g" /\v<<C-r>"><CR>
