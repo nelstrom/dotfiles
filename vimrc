@@ -188,14 +188,6 @@ function! CloseHiddenBuffers()
   echon "Deleted " . l:tally . " buffers"
 endfun
 " Plugin configuration {{{1
-" textobj-entire {{{2
-" textobj-entire defines: ie/ae maps
-" Instead, use:           ia/aa
-let g:textobj_entire_no_default_key_mappings = 1
-xmap aa  <Plug>(textobj-entire-a)
-omap aa  <Plug>(textobj-entire-a)
-xmap ia  <Plug>(textobj-entire-i)
-omap ia  <Plug>(textobj-entire-i)
 " netrw.vim {{{2
 let g:netrw_banner=0
 " Fugitive.vim {{{2
