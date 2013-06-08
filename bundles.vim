@@ -24,6 +24,7 @@ Bundle 'tpope/vim-tbone.git'
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'nelstrom/vim-docopen'
+Bundle 'vim-scripts/prettyprint.vim.git'
 
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'pangloss/vim-javascript.git'

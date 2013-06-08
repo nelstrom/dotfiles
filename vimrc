@@ -12,12 +12,14 @@ if has('mouse')
 endif
 
 " Colorscheme
-set background=dark
+set background=light
 silent! colorscheme solarized
 
 " Plugin configuration {{{1
 " netrw.vim {{{2
 let g:netrw_banner=0
+" Don't show undo files in the explorer
+let g:netrw_list_hide='\.un\~$'
 " Vim-ruby {{{2
 let ruby_fold=1
 " Markdown {{{2
@@ -35,6 +37,8 @@ let g:ctrlp_user_command = 'find %s -type f'
 let g:ragel_default_subtype='ruby'
 
 " Mappings {{{1
+" Override defaults {{{2
+nnoremap Q <Nop>
 " File opening {{{2
 cnoremap <expr> %%  getcmdtype() == ':' ? escape(expand('%:h'), ' \').'/' : '%%'
 
@@ -45,6 +49,7 @@ map <leader>et :tabe %%
 
 " Prompt to open file with same name, different extension
 map <leader>er :e <C-R>=expand("%:r")."."<CR>
+
 
 " Fix the & command in normal+visual modes {{{2
 nnoremap & :&&<Enter>
