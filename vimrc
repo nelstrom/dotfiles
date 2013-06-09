@@ -1,5 +1,6 @@
 " vim: nowrap fdm=marker
 source ~/dotfiles/bundles.vim
+runtime ftplugin/man.vim
 
 " Personal preferences not set by sensible.vim
 set history=5000
@@ -40,7 +41,7 @@ let g:ragel_default_subtype='ruby'
 " Override defaults {{{2
 nnoremap Q <Nop>
 " File opening {{{2
-cnoremap <expr> %%  getcmdtype() == ':' ? escape(expand('%:h'), ' \').'/' : '%%'
+cnoremap <expr> %%  getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 
 map <leader>ew :e %%
 map <leader>es :sp %%
