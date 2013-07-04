@@ -84,3 +84,8 @@ endfunction
 
 " Experimental mappings {{{2
 nnoremap g" /\v<<C-r>"><CR>
+
+command! Path :call EchoPath()
+function! EchoPath()
+  echo join(split(&path, ","), "\n")
+endfunction
