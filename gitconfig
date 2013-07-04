@@ -1,0 +1,16 @@
+[user]
+	name = Drew Neil
+	email = andrew.jr.neil@gmail.com
+[alias]
+	ci = commit
+	st = status
+	br = branch
+	co = checkout
+	ctags = !.git/hooks/ctags
+[color]
+	ui = auto
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/drew/.gitignore
+[init]
+	templatedir = ~/.git_template
