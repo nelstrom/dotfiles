@@ -15,7 +15,8 @@ endif
 
 " Colorscheme
 set background=light
-silent! colorscheme solarized
+silent! colorscheme default
+
 set hidden
 
 " Plugin configuration {{{1
