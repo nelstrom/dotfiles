@@ -20,6 +20,7 @@ Create symlinks:
     ln -s ~/dotfiles/jshintrc ~/.jshintrc
     ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
     ln -s ~/dotfiles/gitconfig ~/.gitconfig
+    ln -s ~/dotfiles/global-gitignore ~/.gitignore
 
 I put Vim's backup and swap files in `~/tmp`, so that directory must exist. To
 be sure, run: 
