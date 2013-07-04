@@ -16,6 +16,7 @@ endif
 " Colorscheme
 set background=light
 silent! colorscheme solarized
+set hidden
 
 " Plugin configuration {{{1
 " netrw.vim {{{2
