@@ -5,6 +5,7 @@ runtime ftplugin/man.vim
 " Personal preferences not set by sensible.vim
 set history=5000
 set showcmd
+set nojoinspaces
 " set listchars=tab:▸\ ,eol:¬
 set foldlevelstart=99
 set noswapfile
