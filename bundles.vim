@@ -25,9 +25,13 @@ Bundle 'tpope/vim-unimpaired.git'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'nelstrom/vim-docopen'
 Bundle 'vim-scripts/prettyprint.vim.git'
+Bundle 'jayferd/ragel.vim.git'
+Bundle 'mattn/gist-vim'
 
 Bundle 'kien/ctrlp.vim.git'
+Bundle 'dsawardekar/portkey'
 Bundle 'pangloss/vim-javascript.git'
+Bundle 'elzr/vim-json'
 Bundle 'godlygeek/tabular.git'
 Bundle 'kongo2002/vim-space.git'
 Bundle 'kana/vim-vspec.git'
@@ -57,3 +61,10 @@ Bundle 'vim-ruby/vim-ruby'
 " Markdown
 Bundle 'tpope/vim-markdown.git'
 Bundle 'nelstrom/vim-markdown-folding.git'
+
+" Riml
+Bundle 'dsawardekar/riml.vim'
+
+" Experimental
+Bundle 'svermeulen/vim-easyclip'
+Bundle 'tommcdo/vim-exchange'
