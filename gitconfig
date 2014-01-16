@@ -10,7 +10,7 @@
 [color]
 	ui = auto
 [core]
-	editor = /usr/bin/vim
+	editor = /usr/local/bin/vim
 	excludesfile = /Users/drew/.gitignore
 [init]
 	templatedir = ~/.git_template
