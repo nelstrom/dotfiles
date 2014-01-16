@@ -65,8 +65,6 @@ export SENCHA_SDK_TOOLS_2_0_0_BETA3="/Applications/SenchaSDKTools-2.0.0-beta3"
 
 export PATH=/Applications/SenchaSDKTools-2.0.0-beta3:$PATH
 
-export PATH=/Users/drew/bin/Sencha/Cmd/3.0.0.188:$PATH
-
-export SENCHA_CMD_3_0_0="/Users/drew/bin/Sencha/Cmd/3.0.0.188"
+export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
