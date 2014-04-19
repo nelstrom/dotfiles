@@ -31,7 +31,7 @@ alias svnadd="svn st | grep '^\?' | awk '{print $2}' | xargs svn add"
 alias svnrmd="svn st | grep '^\!' | awk '{print $2}' | xargs svn rm"
 
 # git aliases
-# http://titusd.co.uk/2010/08/29/use-g-as-an-alias-for-git-without-losing-autocompletion
+# http://joeyates.info/2010/08/29/use-g-as-an-alias-for-git-without-losing-autocompletion/
 alias g='git'
 
 # Vim aliases
