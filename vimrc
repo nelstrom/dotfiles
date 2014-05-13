@@ -48,7 +48,7 @@ let g:netrw_banner=0
 " Don't show undo files in the explorer
 let g:netrw_list_hide='\.un\~$'
 " Vim-ruby {{{2
-let ruby_fold=1
+" let ruby_fold=1
 " Markdown {{{2
 let g:markdown_fenced_languages = ['ruby', 'javascript']
 " Solarized {{{2
