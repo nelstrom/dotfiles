@@ -51,6 +51,12 @@ let g:netrw_list_hide='\.un\~$'
 " let ruby_fold=1
 " Markdown {{{2
 let g:markdown_fenced_languages = ['ruby', 'javascript']
+" FIXME:
+" Markdown files have foldmethod=syntax when both of these options are set:
+" let ruby_fold=1
+" let g:markdown_fenced_languages = ['ruby', 'javascript']
+" to debug, run :verbose set foldmethod?
+"
 " Solarized {{{2
 let g:solarized_menu=0
 if exists('*togglebg#map')
