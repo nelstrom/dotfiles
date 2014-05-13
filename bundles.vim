@@ -5,7 +5,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-filetype plugin indent on
 
 " General enhancements
 Bundle 'tpope/vim-abolish.git'
@@ -68,3 +67,5 @@ Bundle 'dsawardekar/riml.vim'
 " Experimental
 Bundle 'svermeulen/vim-easyclip'
 Bundle 'tommcdo/vim-exchange'
+
+filetype plugin indent on
