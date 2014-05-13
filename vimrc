@@ -61,6 +61,10 @@ let g:ctrlp_jump_to_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'find %s -type f'
 " Ragel {{{2
+augroup ragel
+  autocmd!
+  autocmd BufNewFile,BufRead *.rl setfiletype ragel
+augroup END
 let g:ragel_default_subtype='ruby'
 
 " Mappings {{{1
