@@ -62,6 +62,7 @@ Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-rake.git'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'thoughtbot/vim-rspec'
 
 " Markdown
 Bundle 'tpope/vim-markdown.git'
@@ -73,5 +74,6 @@ Bundle 'dsawardekar/riml.vim'
 " Experimental
 " Bundle 'svermeulen/vim-easyclip'
 Bundle 'tommcdo/vim-exchange'
+Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on
