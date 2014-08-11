@@ -27,6 +27,8 @@ Bundle 'nelstrom/vim-docopen'
 Bundle 'vim-scripts/prettyprint.vim.git'
 Bundle 'jayferd/ragel.vim.git'
 Bundle 'mattn/gist-vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 Bundle 'leafo/moonscript-vim'
 Bundle 'kchmck/vim-coffee-script'
@@ -69,7 +71,7 @@ Bundle 'nelstrom/vim-markdown-folding.git'
 Bundle 'dsawardekar/riml.vim'
 
 " Experimental
-Bundle 'svermeulen/vim-easyclip'
+" Bundle 'svermeulen/vim-easyclip'
 Bundle 'tommcdo/vim-exchange'
 
 filetype plugin indent on
