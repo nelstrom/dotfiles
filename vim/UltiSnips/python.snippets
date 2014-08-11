@@ -1,0 +1,11 @@
+snippet property
+@property
+def ${1:foo}(self):
+    """${2:$1 description.}"""
+    return self._$1
+
+@$1.setter
+def $1(self, value):
+    self._$1 = value
+$0
+endsnippet

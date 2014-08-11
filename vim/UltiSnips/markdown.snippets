@@ -1,0 +1,48 @@
+snippet vc "Vimcasts.org"
+Vimcasts.org
+endsnippet
+
+snippet h= "Create an h1 using === style" b
+${1:Title}
+${1/./=/g}
+$0
+endsnippet
+
+snippet h- "Create an h2 using --- style" b
+${1:Title}
+${1/./-/g}
+$0
+endsnippet
+
+snippet fmatter "Insert yaml frontmatter for a screencast" b
+---
+title: ${1:Title}
+date: ${2:`date +%Y-%m-%d`}
+tags: $3
+---
+
+# $1
+$0
+endsnippet
+
+snippet uls "UltiSnips" l
+UltiSnips
+endsnippet
+
+snippet date
+${2:${3:`date +%Y`}/`date +%m`}/`date +%d`
+endsnippet
+
+
+global !p
+# from snippet_helpers import *
+def fraction(a, b):
+	try:
+		return "%.1f" % (float(a)/float(b))
+	except (ValueError, ZeroDivisionError):
+		return "ERR"
+endglobal
+
+snippet 75wrds "Log a 750words.com session" b
+750words.com: ${1:750} words in ${2:20} minutes - `!p snip.rv = fraction(t[1], t[2])` wpm.
+endsnippet

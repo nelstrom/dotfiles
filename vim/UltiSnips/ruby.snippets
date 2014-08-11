@@ -1,0 +1,19 @@
+snippet module "create a Ruby module"
+module $1
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet expect "rspec: expect(subject).to"
+expect(${1:${VISUAL:subject}}).to $0
+endsnippet
+
+snippet context "rspec: context block"
+context "$1" do
+	${0:${VISUAL:# assertion}}
+end
+endsnippet
+
+snippet () "wrap in parens, stripping whitespace" i
+(`!p snip.rv = snip.v.text.strip() `)
+endsnippet
