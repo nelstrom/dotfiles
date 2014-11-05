@@ -72,3 +72,19 @@ export PATH=/Applications/SenchaSDKTools-2.0.0-beta3:$PATH
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+function ps1_branch {
+  b=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+  if [ -n "$b" ]; then echo " $b"; fi
+}
+
+black="\[\e[30m\]"
+red="\[\e[31m\]"
+green="\[\e[32m\]"
+yellow="\[\e[33m\]"
+blue="\[\e[34m\]"
+magenta="\[\e[35m\]"
+cyan="\[\e[36m\]"
+white="\[\e[37m\]"
+reset="\[\e[0m\]"
+
