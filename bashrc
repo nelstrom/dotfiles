@@ -88,3 +88,17 @@ cyan="\[\e[36m\]"
 white="\[\e[37m\]"
 reset="\[\e[0m\]"
 
+export PS1="${yellow}» $blue\W$magenta\$(ps1_branch)\n$yellow\$$reset "
+
+# Add the following to your ~/.bashrc or ~/.zshrc
+#
+# Alternatively, copy/symlink this file and source in your shell.  See `hitch --setup-path`.
+
+hitch() {
+  command hitch "$@"
+  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
+}
+alias unhitch='hitch -u'
+
+# Uncomment to persist pair info between terminal instances
+# hitch
