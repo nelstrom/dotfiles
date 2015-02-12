@@ -138,15 +138,15 @@ function! EchoTags()
 endfunction
 
 
-let g:EasyClipUseSubstituteDefaults = 1
-nmap <silent> gs <plug>SubstituteOverMotionMap
-nmap gss <plug>SubstituteLine
-xmap gs p
+" let g:EasyClipUseSubstituteDefaults = 1
+" nmap <silent> gs <plug>SubstituteOverMotionMap
+" nmap gss <plug>SubstituteLine
+" xmap gs p
 
-let g:EasyClipUseCutDefaults = 0
-nmap x <Plug>MoveMotionPlug
-xmap x <Plug>MoveMotionXPlug
-nmap xx <Plug>MoveMotionLinePlug
+" let g:EasyClipUseCutDefaults = 0
+" nmap x <Plug>MoveMotionPlug
+" xmap x <Plug>MoveMotionXPlug
+" nmap xx <Plug>MoveMotionLinePlug
 
 nmap cp <Plug>TransposeCharacters
 nnoremap  <Plug>TransposeCharacters xp
