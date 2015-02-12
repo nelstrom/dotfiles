@@ -49,6 +49,19 @@ set hidden
 let g:netrw_banner=0
 " Don't show undo files in the explorer
 let g:netrw_list_hide='\.un\~$'
+" syntastic {{{2
+let g:syntastic_mode_map = {
+      \ 'mode': 'passive',
+      \ 'active_filetypes': [
+      \   'javascript'
+      \ ],
+      \ 'passive_filetypes': [
+      \   'html'
+      \ ]
+      \ }
+nnoremap ZS :SyntasticCheck<CR>
+nnoremap ZT :SyntasticToggle<CR>
+
 " Vim-ruby {{{2
 " let ruby_fold=1
 " Vim-rspec {{{2
