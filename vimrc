@@ -3,6 +3,7 @@ source ~/dotfiles/bundles.vim
 runtime ftplugin/man.vim
 
 " Personal preferences not set by sensible.vim
+let mapleader=','
 set history=5000
 set showcmd
 set nojoinspaces
