@@ -51,6 +51,12 @@ let g:netrw_banner=0
 let g:netrw_list_hide='\.un\~$'
 " Vim-ruby {{{2
 " let ruby_fold=1
+" Vim-rspec {{{2
+map <Leader>t :w<bar>:call RunCurrentSpecFile()<CR>
+map <Leader>s :w<bar>:call RunNearestSpec()<CR>
+map <Leader>l :w<bar>:call RunLastSpec()<CR>
+map <Leader>a :w<bar>:call RunAllSpecs()<CR>
+let g:rspec_command = "Dispatch rspec {spec}"
 " Markdown {{{2
 let g:markdown_fenced_languages = ['ruby', 'javascript']
 " FIXME:
