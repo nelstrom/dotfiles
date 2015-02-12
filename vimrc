@@ -7,6 +7,7 @@ let mapleader=','
 set history=5000
 set showcmd
 set nojoinspaces
+set complete-=t
 " set listchars=tab:▸\ ,eol:¬
 set foldlevelstart=99
 set noswapfile
