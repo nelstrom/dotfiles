@@ -165,3 +165,5 @@ nmap cp <Plug>TransposeCharacters
 nnoremap  <Plug>TransposeCharacters xp
 \:call repeat#set("\<Plug>TransposeCharacters")<CR>
 
+" ember-cli {{{2
+command! -nargs=* Ember :echo system('ember <args>')
