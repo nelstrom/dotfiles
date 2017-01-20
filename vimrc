@@ -1,6 +1,5 @@
 " vim: nowrap fdm=marker
 source ~/dotfiles/bundles.vim
-runtime ftplugin/man.vim
 
 " Personal preferences not set by sensible.vim
 let mapleader=','
@@ -56,9 +55,11 @@ let g:syntastic_mode_map = {
       \   'javascript'
       \ ],
       \ 'passive_filetypes': [
-      \   'html'
+      \   'html',
+      \   'ruby'
       \ ]
       \ }
+let g:syntastic_ruby_checkers=['bx rubocop', 'mri']
 nnoremap ZS :SyntasticCheck<CR>
 nnoremap ZT :SyntasticToggle<CR>
 
@@ -167,3 +168,16 @@ nnoremap  <Plug>TransposeCharacters xp
 
 " ember-cli {{{2
 command! -nargs=* Ember :echo system('ember <args>')
+
+augroup javascript
+  autocmd!
+  autocmd FileType javascript setlocal suffixesadd+=.debug.js,.js
+augroup END
+
+let g:mustache_operators=0
+let g:mustache_abbreviations=0
+
+augroup handlebars
+  autocmd!
+  autocmd FileType html.handlebars runtime! indent/mustache.vim
+augroup END
