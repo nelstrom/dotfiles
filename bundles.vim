@@ -75,5 +75,6 @@ Bundle 'dsawardekar/riml.vim'
 " Bundle 'svermeulen/vim-easyclip'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'nelstrom/vim-subrip'
 
 filetype plugin indent on
