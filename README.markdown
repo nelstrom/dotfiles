@@ -9,6 +9,11 @@ running the commands:
     git submodule init
     git submodule update
 
+Create required directories:
+
+    mkdir -p ~/.config
+    mkdir -p ~/tmp
+
 Create symlinks:
 
     ln -s ~/dotfiles/bashrc ~/.bashrc
@@ -21,11 +26,8 @@ Create symlinks:
     ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
     ln -s ~/dotfiles/gitconfig ~/.gitconfig
     ln -s ~/dotfiles/global-gitignore ~/.gitignore
-
-I put Vim's backup and swap files in `~/tmp`, so that directory must exist. To
-be sure, run: 
-
-    mkdir ~/tmp
+    ln -s ~/dotfiles/vim ~/.config/nvim
+    ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
 
 # VIM #
 
