@@ -41,7 +41,10 @@ Bundle 'godlygeek/tabular.git'
 Bundle 'kongo2002/vim-space.git'
 Bundle 'kana/vim-vspec.git'
 Bundle 'nelstrom/vim-qargs.git'
-Bundle 'vim-scripts/vimwiki.git'
+" Bundle 'vim-scripts/vimwiki.git'
+Bundle 'scrooloose/syntastic'
+
+Bundle 'marijnh/tern_for_vim'
 
 " Custom textobjects
 Bundle 'kana/vim-textobj-user.git'
@@ -50,6 +53,9 @@ Bundle 'kana/vim-textobj-indent.git'
 Bundle 'kana/vim-textobj-syntax.git'
 Bundle 'kana/vim-textobj-line.git'
 Bundle 'nelstrom/vim-textobj-rubyblock.git'
+Bundle 'Julian/vim-textobj-variable-segment'
+Bundle 'bkad/CamelCaseMotion'
+Bundle 'b4winckler/vim-angry'
 
 " Colorschemes
 Bundle 'altercation/vim-colors-solarized.git'
@@ -71,10 +77,26 @@ Bundle 'nelstrom/vim-markdown-folding.git'
 " Riml
 Bundle 'dsawardekar/riml.vim'
 
+" Ember
+Bundle 'mustache/vim-mustache-handlebars'
+
+" Haskell
+Bundle 'urso/haskell_syntax.vim'
+
+" PML
+Bundle 'nelstrom/vim-pml'
+
+" Neovim
+if has('nvim')
+  Bundle 'kassio/neoterm'
+endif
+
 " Experimental
 " Bundle 'svermeulen/vim-easyclip'
 Bundle 'tommcdo/vim-exchange'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'szw/vim-g'
+
 Bundle 'nelstrom/vim-subrip'
 
 filetype plugin indent on
