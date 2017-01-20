@@ -1,4 +1,3 @@
-#echo "loading .bashrc"
 source ~/.profile
 
 # Bash customisations to be syncronised between machines.
@@ -25,6 +24,9 @@ alias sp='./script/server -e production'
 alias t='rake spec'
 alias ta='autotest -rails'
 alias m='rake db:migrate'
+
+# node
+alias nombom="rm -rf node_modules && npm cache clean && npm i && rm -rf bower_components && bower cache clean && bower i && rm -rf tmp"
 
 # SVN aliases
 alias svnadd="svn st | grep '^\?' | awk '{print $2}' | xargs svn add"
@@ -57,21 +59,9 @@ function cdf() {
 # Reload .bashrc
 alias refresh='. ~/.bashrc'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-export PATH=/Developer/Applications/Sencha:$PATH
-export PATH=/Developer/Applications/Sencha/command:$PATH
-export PATH=/Developer/Applications/Sencha/jsbuilder:$PATH
-
-export PATH=/Developer/Applications/SenchaSDKTools-2.0.0-beta3:$PATH
-
-export SENCHA_SDK_TOOLS_2_0_0_BETA3="/Applications/SenchaSDKTools-2.0.0-beta3"
-
-export PATH=/Applications/SenchaSDKTools-2.0.0-beta3:$PATH
-
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 function ps1_branch {
   b=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
