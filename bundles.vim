@@ -79,6 +79,7 @@ Plugin 'dsawardekar/riml.vim'
 
 " Ember
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'AndrewRadev/ember_tools.vim'
 
 " Haskell
 Plugin 'urso/haskell_syntax.vim'
