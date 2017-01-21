@@ -16,7 +16,6 @@ Plugin 'tpope/vim-fugitive.git'
 Plugin 'tpope/vim-ragtag.git'
 Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-scriptease.git'
-Plugin 'tpope/vim-sensible.git'
 Plugin 'tpope/vim-sleuth.git'
 Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-tbone.git'
@@ -28,7 +27,9 @@ Plugin 'vim-scripts/prettyprint.vim.git'
 " Plugin 'jayferd/ragel.vim.git'
 Plugin 'mattn/gist-vim'
 Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+if !has('nvim')
+  Plugin 'tpope/vim-sensible.git'
+endif
 
 Plugin 'leafo/moonscript-vim'
 Plugin 'kchmck/vim-coffee-script'
