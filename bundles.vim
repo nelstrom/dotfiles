@@ -34,7 +34,6 @@ endif
 Plugin 'leafo/moonscript-vim'
 Plugin 'kchmck/vim-coffee-script'
 
-Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'dsawardekar/portkey'
 Plugin 'pangloss/vim-javascript.git'
 Plugin 'elzr/vim-json'
@@ -91,6 +90,7 @@ Plugin 'nelstrom/vim-pml'
 " Neovim
 if has('nvim')
   Plugin 'kassio/neoterm'
+  Plugin 'Shougo/denite.nvim'
 endif
 
 " Experimental
