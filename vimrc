@@ -181,3 +181,8 @@ augroup handlebars
   autocmd!
   autocmd FileType html.handlebars runtime! indent/mustache.vim
 augroup END
+
+augroup emoji_complete
+  autocmd!
+  autocmd FileType markdown setlocal completefunc=emoji#complete
+augroup END

@@ -73,6 +73,7 @@ Plugin 'thoughtbot/vim-rspec'
 " Markdown
 Plugin 'tpope/vim-markdown.git'
 Plugin 'nelstrom/vim-markdown-folding.git'
+Plugin 'junegunn/vim-emoji'
 
 " Riml
 Plugin 'dsawardekar/riml.vim'
