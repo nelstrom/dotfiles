@@ -186,3 +186,15 @@ augroup emoji_complete
   autocmd!
   autocmd FileType markdown setlocal completefunc=emoji#complete
 augroup END
+
+if exists(':terminal')
+  tnoremap <expr> <C-\><C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
+
+  tnoremap <C-\><C-h> <C-\><C-n><C-w>h
+  tnoremap <C-\><C-j> <C-\><C-n><C-w>j
+  tnoremap <C-\><C-k> <C-\><C-n><C-w>k
+  tnoremap <C-\><C-l> <C-\><C-n><C-w>l
+
+  highlight TermCursor ctermfg=red guifg=red
+  highlight TermCursorNC guibg=blue ctermbg=blue ctermfg=white guifg=white
+endif
