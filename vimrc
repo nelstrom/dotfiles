@@ -48,6 +48,17 @@ set hidden
 let g:netrw_banner=0
 " Don't show undo files in the explorer
 let g:netrw_list_hide='\.un\~$'
+" neomake {{{2
+
+autocmd! BufWritePost * Neomake
+
+if emoji#available()
+  let g:neomake_warning_sign = { 'text': emoji#for('exclamation') }
+  let g:neomake_error_sign   = { 'text': emoji#for('x') }
+  let g:neomake_info_sign    = { 'text': emoji#for('8ball') }
+  let g:neomake_message_sign = { 'text': emoji#for('pencil2') }
+endif
+
 " syntastic {{{2
 let g:syntastic_mode_map = {
       \ 'mode': 'passive',

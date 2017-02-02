@@ -42,7 +42,7 @@ Plugin 'kongo2002/vim-space.git'
 Plugin 'kana/vim-vspec.git'
 Plugin 'nelstrom/vim-qargs.git'
 " Plugin 'vim-scripts/vimwiki.git'
-Plugin 'scrooloose/syntastic'
+Plugin 'neomake/neomake'
 
 Plugin 'marijnh/tern_for_vim'
 
