@@ -107,6 +107,19 @@ call denite#custom#var('file_rec/git', 'command',
 nnoremap <silent> <C-p> :<C-u>Denite
       \ `finddir('.git', ';') != '' ? 'file_rec/git' : 'file_rec'`<CR>
 
+call denite#custom#map(
+      \ 'insert',
+      \ '<C-n>',
+      \ '<denite:move_to_next_line>',
+      \ 'noremap'
+      \)
+call denite#custom#map(
+      \ 'insert',
+      \ '<C-p>',
+      \ '<denite:move_to_previous_line>',
+      \ 'noremap'
+      \)
+
 " Ragel {{{2
 augroup ragel
   autocmd!
