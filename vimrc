@@ -120,6 +120,8 @@ call denite#custom#map(
       \ 'noremap'
       \)
 
+command! -nargs=* Help Denite help -input=<args>
+
 " Ripgrep command on grep source
 call denite#custom#var('grep', 'command', ['rg'])
 call denite#custom#var('grep', 'default_opts',
