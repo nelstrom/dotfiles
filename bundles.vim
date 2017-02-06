@@ -92,6 +92,7 @@ Plugin 'nelstrom/vim-pml'
 if has('nvim')
   Plugin 'kassio/neoterm'
   Plugin 'Shougo/denite.nvim'
+  Plugin 'Shougo/neomru.vim'
 endif
 
 " Experimental
