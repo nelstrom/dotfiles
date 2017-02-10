@@ -208,4 +208,11 @@ if exists(':terminal')
 
   highlight TermCursor ctermfg=red guifg=red
   highlight TermCursorNC guibg=blue ctermbg=blue ctermfg=white guifg=white
+
+  autocmd TermOpen * nnoremap <buffer> I I<C-a>
+  autocmd TermOpen * nnoremap <buffer> A A<C-e>
+  autocmd TermOpen * nnoremap <buffer> C i<C-k>
+  autocmd TermOpen * nnoremap <buffer> D i<C-k><C-\><C-n>
+  autocmd TermOpen * nnoremap <buffer> cc i<C-e><C-u>
+  autocmd TermOpen * nnoremap <buffer> dd i<C-e><C-u><C-\><C-n>
 endif
