@@ -58,7 +58,7 @@ Plugin 'bkad/CamelCaseMotion'
 Plugin 'b4winckler/vim-angry'
 
 " Colorschemes
-Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'lifepillar/vim-solarized8'
 Plugin 'nelstrom/vim-mac-classic-theme.git'
 Plugin 'nelstrom/vim-blackboard.git'
 

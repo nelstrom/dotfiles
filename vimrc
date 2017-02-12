@@ -35,8 +35,9 @@ if has("autocmd")
 endif
 
 " Colorscheme
+set termguicolors
 set background=light
-silent! colorscheme default
+silent! colorscheme solarized8_light_high
 
 set hidden
 
