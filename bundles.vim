@@ -100,6 +100,7 @@ endif
 Plugin 'tommcdo/vim-exchange'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'szw/vim-g'
+Plugin 'kana/vim-smartinput'
 
 Plugin 'nelstrom/vim-subrip'
 
