@@ -187,12 +187,6 @@ augroup javascript
 augroup END
 
 let g:mustache_operators=0
-let g:mustache_abbreviations=0
-
-augroup handlebars
-  autocmd!
-  autocmd FileType html.handlebars runtime! indent/mustache.vim
-augroup END
 
 augroup emoji_complete
   autocmd!
