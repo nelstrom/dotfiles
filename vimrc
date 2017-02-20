@@ -13,6 +13,7 @@ set noswapfile
 if has('mouse')
   set mouse=nv
 endif
+set diffopt=filler,vertical
 
 function! FormatprgLocal(filter)
   if !empty(v:char)
