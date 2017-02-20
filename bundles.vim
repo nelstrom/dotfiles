@@ -32,7 +32,6 @@ if !has('nvim')
 endif
 
 Plugin 'leafo/moonscript-vim'
-Plugin 'kchmck/vim-coffee-script'
 
 " Plugin 'dsawardekar/portkey'
 Plugin 'pangloss/vim-javascript.git'
