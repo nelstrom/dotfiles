@@ -89,11 +89,19 @@ let g:markdown_fenced_languages = ['ruby', 'javascript']
 " let g:markdown_fenced_languages = ['ruby', 'javascript']
 " to debug, run :verbose set foldmethod?
 "
-" Solarized {{{2
-let g:solarized_menu=0
-if exists('*togglebg#map')
-  call togglebg#map("<F5>")
-endif
+" Solarized8 {{{2
+nnoremap  <leader>B :<c-u>exe "colors" (g:colors_name =~# "dark"
+      \ ? substitute(g:colors_name, 'dark', 'light', '')
+      \ : substitute(g:colors_name, 'light', 'dark', '')
+      \ )<cr>
+
+function! Solarized8Contrast(delta)
+  let l:schemes = map(["_low", "_flat", "", "_high"], '"solarized8_".(&background).v:val')
+  exe "colors" l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 4 + 4) % 4]
+endfunction
+
+nmap <leader>- :<c-u>call Solarized8Contrast(-v:count1)<cr>
+nmap <leader>+ :<c-u>call Solarized8Contrast(+v:count1)<cr>
 " Ctlr-P {{{2
 let g:ctrlp_jump_to_buffer = 0
 let g:ctrlp_working_path_mode = 0
@@ -233,9 +241,6 @@ if exists(':terminal')
   tnoremap <C-\><C-j> <C-\><C-n><C-w>j
   tnoremap <C-\><C-k> <C-\><C-n><C-w>k
   tnoremap <C-\><C-l> <C-\><C-n><C-w>l
-
-  highlight TermCursor ctermfg=red guifg=red
-  highlight TermCursorNC guibg=blue ctermbg=blue ctermfg=white guifg=white
 
   autocmd TermOpen * nnoremap <buffer> I I<C-a>
   autocmd TermOpen * nnoremap <buffer> A A<C-e>
