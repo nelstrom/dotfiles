@@ -1,108 +1,102 @@
-filetype off
-
-" Vundle setup
-set runtimepath+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " General enhancements
-Plugin 'tpope/vim-abolish.git'
-Plugin 'tpope/vim-characterize.git'
-Plugin 'tpope/vim-commentary.git'
-Plugin 'tpope/vim-dispatch.git'
-Plugin 'tpope/vim-eunuch.git'
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'tpope/vim-ragtag.git'
-Plugin 'tpope/vim-repeat.git'
-Plugin 'tpope/vim-scriptease.git'
-Plugin 'tpope/vim-sleuth.git'
-Plugin 'tpope/vim-surround.git'
-Plugin 'tpope/vim-tbone.git'
-Plugin 'tpope/vim-unimpaired.git'
-Plugin 'tpope/vim-projectionist.git'
-Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'nelstrom/vim-docopen'
-Plugin 'vim-scripts/prettyprint.vim.git'
-" Plugin 'jayferd/ragel.vim.git'
-Plugin 'mattn/gist-vim'
-Plugin 'SirVer/ultisnips'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-characterize'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-scriptease'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-tbone'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-projectionist'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'nelstrom/vim-docopen'
+Plug 'vim-scripts/prettyprint.vim'
+" Plug 'jayferd/ragel.vim'
+Plug 'mattn/gist-vim'
+Plug 'SirVer/ultisnips'
 if !has('nvim')
-  Plugin 'tpope/vim-sensible.git'
+  Plug 'tpope/vim-sensible'
 endif
 
-Plugin 'leafo/moonscript-vim'
+Plug 'leafo/moonscript-vim'
 
-" Plugin 'dsawardekar/portkey'
-Plugin 'pangloss/vim-javascript.git'
-Plugin 'elzr/vim-json'
-Plugin 'godlygeek/tabular.git'
-Plugin 'kongo2002/vim-space.git'
-Plugin 'kana/vim-vspec.git'
-Plugin 'nelstrom/vim-qargs.git'
-" Plugin 'vim-scripts/vimwiki.git'
-Plugin 'neomake/neomake'
+" Plug 'dsawardekar/portkey'
+Plug 'pangloss/vim-javascript'
+Plug 'elzr/vim-json'
+Plug 'godlygeek/tabular'
+Plug 'kongo2002/vim-space'
+Plug 'kana/vim-vspec'
+Plug 'nelstrom/vim-qargs'
+" Plug 'vim-scripts/vimwiki'
+Plug 'neomake/neomake'
 
-Plugin 'marijnh/tern_for_vim'
+Plug 'marijnh/tern_for_vim'
 
 " Custom textobjects
-Plugin 'kana/vim-textobj-user.git'
-Plugin 'kana/vim-textobj-entire.git'
-Plugin 'kana/vim-textobj-indent.git'
-Plugin 'kana/vim-textobj-syntax.git'
-Plugin 'kana/vim-textobj-line.git'
-Plugin 'nelstrom/vim-textobj-rubyblock.git'
-Plugin 'Julian/vim-textobj-variable-segment'
-Plugin 'bkad/CamelCaseMotion'
-Plugin 'b4winckler/vim-angry'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-syntax'
+Plug 'kana/vim-textobj-line'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'Julian/vim-textobj-variable-segment'
+Plug 'bkad/CamelCaseMotion'
+Plug 'b4winckler/vim-angry'
 
 " Colorschemes
-Plugin 'lifepillar/vim-solarized8'
-Plugin 'morhetz/gruvbox'
-Plugin 'nelstrom/vim-mac-classic-theme.git'
-Plugin 'nelstrom/vim-blackboard.git'
+Plug 'lifepillar/vim-solarized8'
+Plug 'morhetz/gruvbox'
+Plug 'nelstrom/vim-mac-classic-theme'
+Plug 'nelstrom/vim-blackboard'
 
 " Ruby enhancements
-Plugin 'tpope/vim-bundler.git'
-Plugin 'tpope/vim-endwise.git'
-Plugin 'tpope/vim-rails.git'
-Plugin 'tpope/vim-rake.git'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'vim-ruby/vim-ruby'
+Plug 'thoughtbot/vim-rspec'
 
 " Markdown
-Plugin 'tpope/vim-markdown.git'
-Plugin 'nelstrom/vim-markdown-folding.git'
-Plugin 'junegunn/vim-emoji'
+Plug 'tpope/vim-markdown'
+Plug 'nelstrom/vim-markdown-folding'
+Plug 'junegunn/vim-emoji'
 
 " Riml
-Plugin 'dsawardekar/riml.vim'
+Plug 'dsawardekar/riml.vim'
 
 " Ember
-" Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'AndrewRadev/vim-mustache-handlebars'
-Plugin 'AndrewRadev/ember_tools.vim'
+" Plug 'mustache/vim-mustache-handlebars'
+Plug 'AndrewRadev/vim-mustache-handlebars'
+Plug 'AndrewRadev/ember_tools.vim'
 
 " Haskell
-Plugin 'urso/haskell_syntax.vim'
+Plug 'urso/haskell_syntax.vim'
 
 " PML
-Plugin 'nelstrom/vim-pml'
+Plug 'nelstrom/vim-pml'
 
 " Neovim
 if has('nvim')
-  Plugin 'kassio/neoterm'
-  Plugin 'Shougo/denite.nvim'
-  Plugin 'Shougo/neomru.vim'
+  Plug 'kassio/neoterm'
+  Plug 'Shougo/denite.nvim'
+  Plug 'Shougo/neomru.vim'
 endif
 
 " Experimental
-" Plugin 'svermeulen/vim-easyclip'
-Plugin 'tommcdo/vim-exchange'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'szw/vim-g'
-Plugin 'kana/vim-smartinput'
+" Plug 'svermeulen/vim-easyclip'
+Plug 'tommcdo/vim-exchange'
+Plug 'airblade/vim-gitgutter'
+Plug 'szw/vim-g'
+Plug 'kana/vim-smartinput'
 
-Plugin 'nelstrom/vim-subrip'
+Plug 'nelstrom/vim-subrip'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
