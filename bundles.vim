@@ -58,6 +58,7 @@ Plugin 'b4winckler/vim-angry'
 
 " Colorschemes
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'morhetz/gruvbox'
 Plugin 'nelstrom/vim-mac-classic-theme.git'
 Plugin 'nelstrom/vim-blackboard.git'
 
