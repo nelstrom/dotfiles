@@ -38,7 +38,7 @@ endif
 " Colorscheme
 set termguicolors
 set background=light
-silent! colorscheme solarized8_light_high
+silent! colorscheme solarized8_light
 
 set hidden
 
