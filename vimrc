@@ -1,8 +1,9 @@
 " vim: nowrap fdm=marker
+scriptencoding utf-8
 source ~/dotfiles/bundles.vim
 
 " Personal preferences not set by sensible.vim
-let mapleader=','
+let g:mapleader=','
 set history=5000
 set showcmd
 set nojoinspaces
@@ -15,6 +16,11 @@ if has('mouse')
 endif
 set diffopt=filler,vertical
 
+" Define a group for autocommands
+augroup vimrc
+  autocmd!
+augroup END
+
 function! FormatprgLocal(filter)
   if !empty(v:char)
     return 1
@@ -25,14 +31,14 @@ function! FormatprgLocal(filter)
   endif
 endfunction
 
-if has("autocmd")
+if has('autocmd')
   augroup ragtag_filetypes
     autocmd!
     autocmd FileType markdown    call RagtagInit()
   augroup END
-  let pandoc_pipeline  = "pandoc --from=html --to=markdown"
-  let pandoc_pipeline .= " | pandoc --from=markdown --to=html"
-  autocmd FileType html setlocal formatexpr=FormatprgLocal(pandoc_pipeline)
+  let g:pandoc_pipeline  = 'pandoc --from=html --to=markdown'
+  let g:pandoc_pipeline .= ' | pandoc --from=markdown --to=html'
+  autocmd vimrc FileType html setlocal formatexpr=FormatprgLocal(pandoc_pipeline)
 endif
 
 " Colorscheme
@@ -49,7 +55,7 @@ let g:netrw_banner=0
 let g:netrw_list_hide='\.un\~$'
 " neomake {{{2
 
-autocmd! BufWritePost * Neomake
+autocmd! vimrc BufWritePost * Neomake
 
 " if emoji#available()
 "   let g:neomake_warning_sign = { 'text': emoji#for('exclamation') }
@@ -80,7 +86,7 @@ map <Leader>t :w<bar>:call RunCurrentSpecFile()<CR>
 map <Leader>s :w<bar>:call RunNearestSpec()<CR>
 map <Leader>l :w<bar>:call RunLastSpec()<CR>
 map <Leader>a :w<bar>:call RunAllSpecs()<CR>
-let g:rspec_command = "Dispatch rspec {spec}"
+let g:rspec_command = 'Dispatch rspec {spec}'
 " Markdown {{{2
 let g:markdown_fenced_languages = ['ruby', 'javascript']
 " FIXME:
@@ -96,8 +102,8 @@ nnoremap  <leader>B :<c-u>exe "colors" (g:colors_name =~# "dark"
       \ )<cr>
 
 function! Solarized8Contrast(delta)
-  let l:schemes = map(["_low", "_flat", "", "_high"], '"solarized8_".(&background).v:val')
-  exe "colors" l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 4 + 4) % 4]
+  let l:schemes = map(['_low', '_flat', '', '_high'], '"solarized8_".(&background).v:val')
+  exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 4 + 4) % 4]
 endfunction
 
 nmap <leader>- :<c-u>call Solarized8Contrast(-v:count1)<cr>
@@ -138,14 +144,14 @@ xnoremap & :&&<Enter>
 " Strip trailing whitespace {{{2
 function! Preserve(command)
   " Preparation: save last search, and cursor position.
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
+  let l:_s=@/
+  let l:l = line('.')
+  let l:c = col('.')
   " Do the business:
   execute a:command
   " Clean up: restore previous search history, and cursor position
-  let @/=_s
-  call cursor(l, c)
+  let @/=l:_s
+  call cursor(l:l, l:c)
 endfunction
 
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
@@ -155,7 +161,7 @@ xnoremap . :normal .<CR>
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
 function! ExecuteMacroOverVisualRange()
-  echo "@".getcmdline()
+  echo '@'.getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
@@ -164,12 +170,12 @@ nnoremap g" /\v<<C-r>"><CR>
 
 command! Path :call EchoPath()
 function! EchoPath()
-  echo join(split(&path, ","), "\n")
+  echo join(split(&path, ','), '\n')
 endfunction
 
 command! TagFiles :call EchoTags()
 function! EchoTags()
-  echo join(split(&tags, ","), "\n")
+  echo join(split(&tags, ','), '\n')
 endfunction
 
 
@@ -237,12 +243,12 @@ augroup END
 if exists(':terminal')
   tnoremap <expr> <C-\><C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
-  autocmd TermOpen * nnoremap <buffer> I I<C-a>
-  autocmd TermOpen * nnoremap <buffer> A A<C-e>
-  autocmd TermOpen * nnoremap <buffer> C i<C-k>
-  autocmd TermOpen * nnoremap <buffer> D i<C-k><C-\><C-n>
-  autocmd TermOpen * nnoremap <buffer> cc i<C-e><C-u>
-  autocmd TermOpen * nnoremap <buffer> dd i<C-e><C-u><C-\><C-n>
+  autocmd vimrc TermOpen * nnoremap <buffer> I I<C-a>
+  autocmd vimrc TermOpen * nnoremap <buffer> A A<C-e>
+  autocmd vimrc TermOpen * nnoremap <buffer> C i<C-k>
+  autocmd vimrc TermOpen * nnoremap <buffer> D i<C-k><C-\><C-n>
+  autocmd vimrc TermOpen * nnoremap <buffer> cc i<C-e><C-u>
+  autocmd vimrc TermOpen * nnoremap <buffer> dd i<C-e><C-u><C-\><C-n>
 endif
 
 " https://github.com/neovim/neovim/pull/2076#issuecomment-76998265
