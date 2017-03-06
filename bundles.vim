@@ -79,7 +79,8 @@ Plugin 'junegunn/vim-emoji'
 Plugin 'dsawardekar/riml.vim'
 
 " Ember
-Plugin 'mustache/vim-mustache-handlebars'
+" Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'AndrewRadev/vim-mustache-handlebars'
 Plugin 'AndrewRadev/ember_tools.vim'
 
 " Haskell
