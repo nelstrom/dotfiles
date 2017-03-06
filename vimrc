@@ -237,15 +237,35 @@ augroup END
 if exists(':terminal')
   tnoremap <expr> <C-\><C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
-  tnoremap <C-\><C-h> <C-\><C-n><C-w>h
-  tnoremap <C-\><C-j> <C-\><C-n><C-w>j
-  tnoremap <C-\><C-k> <C-\><C-n><C-w>k
-  tnoremap <C-\><C-l> <C-\><C-n><C-w>l
-
   autocmd TermOpen * nnoremap <buffer> I I<C-a>
   autocmd TermOpen * nnoremap <buffer> A A<C-e>
   autocmd TermOpen * nnoremap <buffer> C i<C-k>
   autocmd TermOpen * nnoremap <buffer> D i<C-k><C-\><C-n>
   autocmd TermOpen * nnoremap <buffer> cc i<C-e><C-u>
   autocmd TermOpen * nnoremap <buffer> dd i<C-e><C-u><C-\><C-n>
+endif
+
+" https://github.com/neovim/neovim/pull/2076#issuecomment-76998265
+nnoremap <a-h> <c-w>h
+nnoremap <a-j> <c-w>j
+nnoremap <a-k> <c-w>k
+nnoremap <a-l> <c-w>l
+vnoremap <a-h> <c-\><c-n><c-w>h
+vnoremap <a-j> <c-\><c-n><c-w>j
+vnoremap <a-k> <c-\><c-n><c-w>k
+vnoremap <a-l> <c-\><c-n><c-w>l
+inoremap <a-h> <c-\><c-n><c-w>h
+inoremap <a-j> <c-\><c-n><c-w>j
+inoremap <a-k> <c-\><c-n><c-w>k
+inoremap <a-l> <c-\><c-n><c-w>l
+cnoremap <a-h> <c-\><c-n><c-w>h
+cnoremap <a-j> <c-\><c-n><c-w>j
+cnoremap <a-k> <c-\><c-n><c-w>k
+cnoremap <a-l> <c-\><c-n><c-w>l
+if has('nvim')
+  tnoremap <a-h> <c-\><c-n><c-w>h
+  tnoremap <a-j> <c-\><c-n><c-w>j
+  tnoremap <a-k> <c-\><c-n><c-w>k
+  tnoremap <a-l> <c-\><c-n><c-w>l
+  tnoremap <A-[> <C-\><C-n>
 endif
