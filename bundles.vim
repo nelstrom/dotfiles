@@ -1,8 +1,7 @@
-set nocompatible
 filetype off
 
 " Vundle setup
-set rtp+=~/.vim/bundle/Vundle.vim/
+set runtimepath+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
