@@ -199,37 +199,39 @@ nnoremap  <Plug>TransposeCharacters xp
 " ember-cli {{{2
 command! -nargs=* Ember :echo system('ember <args>')
 
-call smartinput#clear_rules()
-call smartinput#define_rule({
-      \'at': '{\%#',
-      \'char': '{',
-      \'input': '{}}<Left><Left>',
-      \'filetype': ['html.handlebars']
-      \ })
-call smartinput#define_rule({
-      \'at': '\%#}}',
-      \'char': '}',
-      \'input': '<Right><Right>',
-      \'filetype': ['html.handlebars']
-      \ })
-call smartinput#define_rule({
-      \'at': '}}\%#',
-      \'char': '}',
-      \'input': '',
-      \'filetype': ['html.handlebars']
-      \ })
-call smartinput#define_rule({
-      \'at': '{{\%#}}',
-      \'char': '<BS>',
-      \'input': '<BS><BS><Del><Del>',
-      \'filetype': ['html.handlebars']
-      \ })
-call smartinput#define_rule({
-      \'at': '{{}}\%#',
-      \'char': '<BS>',
-      \'input': '<BS><BS><BS><BS>',
-      \'filetype': ['html.handlebars']
-      \ })
+if exists('*smartinput#define_rule')
+  call smartinput#clear_rules()
+  call smartinput#define_rule({
+        \'at': '{\%#',
+        \'char': '{',
+        \'input': '{}}<Left><Left>',
+        \'filetype': ['html.handlebars']
+        \ })
+  call smartinput#define_rule({
+        \'at': '\%#}}',
+        \'char': '}',
+        \'input': '<Right><Right>',
+        \'filetype': ['html.handlebars']
+        \ })
+  call smartinput#define_rule({
+        \'at': '}}\%#',
+        \'char': '}',
+        \'input': '',
+        \'filetype': ['html.handlebars']
+        \ })
+  call smartinput#define_rule({
+        \'at': '{{\%#}}',
+        \'char': '<BS>',
+        \'input': '<BS><BS><Del><Del>',
+        \'filetype': ['html.handlebars']
+        \ })
+  call smartinput#define_rule({
+        \'at': '{{}}\%#',
+        \'char': '<BS>',
+        \'input': '<BS><BS><BS><BS>',
+        \'filetype': ['html.handlebars']
+        \ })
+endif
 
 augroup javascript
   autocmd!
