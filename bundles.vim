@@ -1,3 +1,5 @@
+" vim-plug cheatsheet:
+" :PlugInstall or :PlugUpdate
 call plug#begin('~/.vim/plugged')
 
 " General enhancements
