@@ -40,7 +40,7 @@ Plug 'nelstrom/vim-qargs'
 " Plug 'vim-scripts/vimwiki'
 Plug 'neomake/neomake'
 
-Plug 'marijnh/tern_for_vim'
+" Plug 'marijnh/tern_for_vim'
 
 " Custom textobjects
 Plug 'kana/vim-textobj-user'
