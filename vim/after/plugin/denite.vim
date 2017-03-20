@@ -9,7 +9,7 @@ command! -nargs=* Help Denite help -input=<args>
 command! -nargs=* Buffer Denite buffer -input=<args>
 command! -nargs=* Ls Denite buffer
 command! -nargs=* Registers Denite register
-command! -nargs=* Grep Denite grep
+command! -nargs=* Grep Denite grep -input=<args>
 command! -nargs=* Line Denite line
 command! -nargs=* Colorscheme Denite colorscheme
 
