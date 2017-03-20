@@ -27,6 +27,7 @@ if !has('nvim')
   Plug 'tpope/vim-sensible'
 endif
 
+Plug 'machakann/vim-highlightedyank'
 Plug 'leafo/moonscript-vim'
 
 " Plug 'dsawardekar/portkey'
