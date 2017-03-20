@@ -1,0 +1,25 @@
+snippet monodef "Create JSON for a mono-stroke definition" b
+{
+	"output": "$1",
+	"bricks": [
+		$2
+	]
+},$0
+endsnippet
+
+snippet multidef "Create JSON for a multi-stroke definition" b
+{
+	"output": "$1",
+	"strokes": [
+		$2
+	]
+},$0
+endsnippet
+
+snippet strokedef "Create JSON for a stroke definition" b
+{
+	"bricks": [
+		$1
+	]
+},$0
+endsnippet

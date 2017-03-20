@@ -1,0 +1,15 @@
+snippet andthen "insert andThen(function() {});" b
+andThen(function() {
+	$0
+});
+endsnippet
+
+snippet emberrun "Wrap selection in Ember.run(function() {...});" b
+Ember.run(function() {
+	${0:${VISUAL}}
+});
+endsnippet
+
+snippet get "Wrap a selection in .get('...')" b
+this.get('${0:${VISUAL}}')
+endsnippet
