@@ -15,6 +15,7 @@ if has('mouse')
   set mouse=nv
 endif
 set diffopt=filler,vertical
+set ruler
 
 " Define a group for autocommands
 augroup vimrc
