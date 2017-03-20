@@ -123,9 +123,11 @@ augroup ragel
 augroup END
 let g:ragel_default_subtype='ruby'
 
-" Mappings {{{1
+" Mappings and commands {{{1
 " Override defaults {{{2
 nnoremap Q <Nop>
+command! -nargs=0 -bang Qa qall!
+command! -nargs=0 -bang QA qall!
 " File opening {{{2
 cnoremap <expr> %%  getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 
