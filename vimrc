@@ -276,5 +276,5 @@ if has('nvim')
   tnoremap <a-j> <c-\><c-n><c-w>j
   tnoremap <a-k> <c-\><c-n><c-w>k
   tnoremap <a-l> <c-\><c-n><c-w>l
-  tnoremap <A-[> <C-\><C-n>
+  tnoremap <Esc> <C-\><C-n>
 endif
