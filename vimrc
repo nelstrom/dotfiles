@@ -1,6 +1,13 @@
 " vim: nowrap fdm=marker
 scriptencoding utf-8
-source ~/dotfiles/bundles.vim
+
+if has('nvim')
+  source ~/dotfiles/bundles.vim
+else
+  syntax enable
+  filetype plugin indent on
+  source ~/dotfiles/packages.vim
+end
 
 " Personal preferences not set by sensible.vim
 let g:mapleader=','

@@ -3,6 +3,7 @@
 vim/.netrwhist
 vim/bundle/
 vim/plugged/
+vim/pack/
 gitconfig
 vim/init.vim
 vim/spell/*
