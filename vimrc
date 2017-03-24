@@ -63,6 +63,7 @@ let g:netrw_banner=0
 let g:netrw_list_hide='\.un\~$'
 " neomake {{{2
 
+let g:neomake_javascript_enabled_makers = ['eslint']
 autocmd! vimrc BufWritePost * Neomake
 
 " if emoji#available()
