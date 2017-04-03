@@ -7,21 +7,21 @@
 " call minpac#clean()
 " :PackClean
 packadd minpac
-packloadall
 
 if has('nvim')
-  let s:package_name = 'neo'
+  set packpath=~/.config/nvim/site
+  call minpac#init({'package_name': 'neovim'})
 else
-  let s:package_name = 'classic'
+  set packpath=~/.vim
+  call minpac#init({'package_name': 'classic'})
 endif
-
-call minpac#init({'package_name': s:package_name})
 
 " minpac must have {'type': 'opt'} so that it can be loaded with
 " `packadd`.
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('dsawardekar/riml.vim', {'type': 'opt'})
 
+" General enhancements
 call minpac#add('tpope/vim-abolish')
 call minpac#add('tpope/vim-characterize')
 call minpac#add('tpope/vim-commentary')
@@ -36,8 +36,15 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-tbone')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-projectionist')
-call minpac#add('elzr/vim-json')
+call minpac#add('nelstrom/vim-docopen')
+call minpac#add('nelstrom/vim-visual-star-search')
+call minpac#add('SirVer/ultisnips')
 call minpac#add('godlygeek/tabular')
+call minpac#add('neomake/neomake')
+call minpac#add('tommcdo/vim-exchange')
+call minpac#add('airblade/vim-gitgutter')
+call minpac#add('szw/vim-g')
+call minpac#add('kana/vim-smartinput')
 
 " Custom textobjects
 call minpac#add('kana/vim-textobj-user')
@@ -57,27 +64,33 @@ call minpac#add('junegunn/vim-emoji', {'type': 'opt'})
 
 " JavaScript
 call minpac#add('pangloss/vim-javascript')
+call minpac#add('elzr/vim-json')
 
-call minpac#add('nelstrom/vim-docopen')
-call minpac#add('tpope/vim-unimpaired')
-call minpac#add('tpope/vim-commentary')
+" Ruby
+call minpac#add('tpope/vim-bundler')
+call minpac#add('tpope/vim-endwise')
+call minpac#add('tpope/vim-rails')
+call minpac#add('tpope/vim-rake')
+call minpac#add('vim-ruby/vim-ruby')
 
-call minpac#add('tommcdo/vim-exchange')
-call minpac#add('airblade/vim-gitgutter')
-call minpac#add('szw/vim-g')
-call minpac#add('kana/vim-smartinput')
+" Support for rare and exotic languages
+call minpac#add('nelstrom/vim-pml')
+call minpac#add('nelstrom/vim-subrip')
 
 " Colorschemes
 call minpac#add('lifepillar/vim-solarized8', {'type': 'opt'})
 call minpac#add('morhetz/gruvbox', {'type': 'opt'})
 
+" Plugins for either Vim8 or NeoVim
 if has('nvim')
-  call minpac#add('Shougo/denite.nvim')
-  call minpac#add('machakann/vim-highlightedyank')
+  call minpac#add('Shougo/denite.nvim', {'type': 'opt'})
+  call minpac#add('machakann/vim-highlightedyank', {'type': 'opt'})
+  call minpac#add('kassio/neoterm', {'type': 'opt'})
+  call minpac#add('Shougo/neomru.vim', {'type': 'opt'})
 else
-  call minpac#add('Shougo/unite.vim')
+  call minpac#add('Shougo/unite.vim', {'type': 'opt'})
 endif
 
 " Handy commands:
-command PackUpdate call minpac#update()
-command PackClean call minpac#clean()
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
