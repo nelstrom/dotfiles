@@ -1,6 +1,11 @@
 " vim: nowrap fdm=marker
 scriptencoding utf-8
 
+if !has('nvim')
+  unlet! skip_defaults_vim
+  source $VIMRUNTIME/defaults.vim
+endif
+
 source ~/dotfiles/packages.vim
 
 " Personal preferences not set by sensible.vim
