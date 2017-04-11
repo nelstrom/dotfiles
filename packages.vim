@@ -4,17 +4,19 @@
 " :PackUpdate
 " 
 " To uninstall unused plugins, use one of:
-" call minpac#clean()
+" :call minpac#clean()
 " :PackClean
-packadd minpac
 
 if has('nvim')
   set packpath=~/.config/nvim/site
-  call minpac#init({'package_name': 'neovim'})
+  let s:package_name = 'neovim'
 else
   set packpath=~/.vim
-  call minpac#init({'package_name': 'classic'})
+  let s:package_name = 'classic'
 endif
+
+packadd minpac
+call minpac#init({'package_name': s:package_name, 'verbose': 0})
 
 " minpac must have {'type': 'opt'} so that it can be loaded with
 " `packadd`.
