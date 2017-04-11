@@ -58,6 +58,7 @@ call minpac#add('nelstrom/vim-textobj-rubyblock')
 call minpac#add('Julian/vim-textobj-variable-segment')
 call minpac#add('bkad/CamelCaseMotion')
 call minpac#add('b4winckler/vim-angry')
+call minpac#add('saihoooooooo/vim-textobj-space')
 
 " Markdown
 call minpac#add('tpope/vim-markdown')
