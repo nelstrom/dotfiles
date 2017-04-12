@@ -23,6 +23,10 @@ endif
 set diffopt=filler,vertical
 set ruler
 
+if has('nvim')
+  set inccommand=nosplit
+endif
+
 " Define a group for autocommands
 augroup vimrc
   autocmd!
