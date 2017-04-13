@@ -11,7 +11,7 @@ running the commands:
 
 Create required directories:
 
-    mkdir -p ~/.config
+    mkdir -p ~/.config/nvim
     mkdir -p ~/tmp
 
 Create symlinks:
@@ -26,8 +26,7 @@ Create symlinks:
     ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
     ln -s ~/dotfiles/gitconfig ~/.gitconfig
     ln -s ~/dotfiles/global-gitignore ~/.gitignore
-    ln -s ~/dotfiles/vim ~/.config/nvim
-    ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
+    ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
 
 # VIM #
 
