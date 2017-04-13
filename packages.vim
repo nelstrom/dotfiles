@@ -7,16 +7,20 @@
 " :call minpac#clean()
 " :PackClean
 
-if has('nvim')
-  set packpath=~/.config/nvim/site
-  let s:package_name = 'neovim'
-else
-  set packpath=~/.vim
-  let s:package_name = 'classic'
+" if has('nvim')
+"   set packpath=~/.config/nvim/site
+"   let s:package_name = 'neovim'
+" else
+"   set packpath=~/.vim
+"   let s:package_name = 'classic'
+" endif
+
+silent! packadd minpac
+if !exists('*minpac#init')
+  finish
 endif
 
-packadd minpac
-call minpac#init({'package_name': s:package_name, 'verbose': 0})
+call minpac#init({'verbose': 0})
 
 " minpac must have {'type': 'opt'} so that it can be loaded with
 " `packadd`.
