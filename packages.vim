@@ -96,8 +96,8 @@ call minpac#add('reedes/vim-colors-pencil', {'type': 'opt'})
 
 " Plugins for either Vim8 or NeoVim
 if has('nvim')
-  call minpac#add('Shougo/denite.nvim', {'type': 'opt'})
-  call minpac#add('machakann/vim-highlightedyank', {'type': 'opt'})
+  call minpac#add('Shougo/denite.nvim', {})
+  call minpac#add('machakann/vim-highlightedyank', {})
   call minpac#add('kassio/neoterm', {'type': 'opt'})
   call minpac#add('Shougo/neomru.vim', {'type': 'opt'})
 else
