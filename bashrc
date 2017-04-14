@@ -33,12 +33,10 @@ alias svnadd="svn st | grep '^\?' | awk '{print $2}' | xargs svn add"
 alias svnrmd="svn st | grep '^\!' | awk '{print $2}' | xargs svn rm"
 
 # git aliases
-# http://joeyates.info/2010/08/29/use-g-as-an-alias-for-git-without-losing-autocompletion/
 alias g='git'
-
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-  source /usr/local/etc/bash_completion.d/git-completion.bash
-fi
+# http://stackoverflow.com/a/15009611/128850
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+__git_complete g __git_main
 
 # Vim aliases
 alias rvim='mvim --remote-silent '
