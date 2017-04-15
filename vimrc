@@ -159,18 +159,13 @@ xnoremap & :&&<Enter>
 
 " Strip trailing whitespace {{{2
 function! Preserve(command)
-  " Preparation: save last search, and cursor position.
-  let l:_s=@/
-  let l:l = line('.')
-  let l:c = col('.')
-  " Do the business:
+  let l:save = winsaveview()
   execute a:command
-  " Clean up: restore previous search history, and cursor position
-  let @/=l:_s
-  call cursor(l:l, l:c)
+  call winrestview(l:save)
 endfunction
 
-nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+command! TrimWhitespace call Preserve("%s/\\s\\+$//e")
+nmap _$ :TrimWhitespace<CR>
 
 " Visual line repeat {{{2
 xnoremap . :normal .<CR>
