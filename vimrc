@@ -181,12 +181,12 @@ nnoremap g" /\v<<C-r>"><CR>
 
 command! Path :call EchoPath()
 function! EchoPath()
-  echo join(split(&path, ','), '\n')
+  echo join(split(&path, ','), "\n")
 endfunction
 
 command! TagFiles :call EchoTags()
 function! EchoTags()
-  echo join(split(&tags, ','), '\n')
+  echo join(split(&tags, ','), "\n")
 endfunction
 
 
