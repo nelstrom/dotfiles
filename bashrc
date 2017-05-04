@@ -93,3 +93,5 @@ alias unhitch='hitch -u'
 
 # Set up https://hub.github.com/:
 eval "$(hub alias -s)"
+
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
