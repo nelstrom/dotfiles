@@ -95,3 +95,9 @@ alias unhitch='hitch -u'
 eval "$(hub alias -s)"
 
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+  export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+else
+  export VISUAL="nvim"
+fi
